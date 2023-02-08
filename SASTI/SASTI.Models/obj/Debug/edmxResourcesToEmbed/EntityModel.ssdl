@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PADLModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AdminUsers">
+    <Key>
+      <PropertyRef Name="AdminUserId" />
+    </Key>
+    <Property Name="AdminUserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserRole" Type="nvarchar" MaxLength="50" />
+    <Property Name="StationId" Type="int" />
+    <Property Name="RecordStatus" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Boards">
+    <Key>
+      <PropertyRef Name="BoardId" />
+    </Key>
+    <Property Name="BoardId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DeviceUDID" Type="nvarchar" MaxLength="50" />
+    <Property Name="StationId" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="BoardType" Type="nvarchar" MaxLength="50" />
+    <Property Name="ImageUrl" Type="nvarchar" MaxLength="250" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Battery" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="BoardStatus" Type="nvarchar" MaxLength="50" />
+    <Property Name="Latitude" Type="decimal" Precision="18" Scale="5" />
+    <Property Name="Longitude" Type="decimal" Precision="18" Scale="5" />
+    <Property Name="RecordStatus" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="PromoCodes">
+    <Key>
+      <PropertyRef Name="PromoCodeId" />
+    </Key>
+    <Property Name="PromoCodeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PromoCodeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="ValidFrom" Type="datetime" />
+    <Property Name="ValidTo" Type="datetime" />
+    <Property Name="UsageLimit" Type="int" />
+    <Property Name="Value" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ValueUnit" Type="nvarchar" MaxLength="50" />
+    <Property Name="RecordStatus" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Stations">
+    <Key>
+      <PropertyRef Name="StationId" />
+    </Key>
+    <Property Name="StationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="250" />
+    <Property Name="City" Type="nvarchar" MaxLength="50" />
+    <Property Name="State" Type="nvarchar" MaxLength="50" />
+    <Property Name="Zip" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="ImageUrl" Type="nvarchar" MaxLength="150" />
+    <Property Name="Latitude" Type="decimal" Precision="18" Scale="5" />
+    <Property Name="Longitude" Type="decimal" Precision="18" Scale="5" />
+    <Property Name="RecordStatus" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="UserNotifications">
+    <Key>
+      <PropertyRef Name="UserNotficationId" />
+    </Key>
+    <Property Name="UserNotficationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="UserReservationId" Type="int" />
+    <Property Name="NotficationType" Type="nvarchar" MaxLength="50" />
+    <Property Name="NotificationHeader" Type="nvarchar" MaxLength="250" />
+    <Property Name="NotificationMessage" Type="nvarchar" MaxLength="250" />
+    <Property Name="IsRead" Type="bit" />
+    <Property Name="RecordStatus" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+  </EntityType>
+  <EntityType Name="UserReservationDetail">
+    <Key>
+      <PropertyRef Name="UserReservationDetailId" />
+    </Key>
+    <Property Name="UserReservationDetailId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserReservationId" Type="int" />
+    <Property Name="Latitude" Type="decimal" Precision="18" Scale="5" />
+    <Property Name="Longitude" Type="decimal" Precision="18" Scale="5" />
+    <Property Name="TotalDistance" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CreatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="UserReservations">
+    <Key>
+      <PropertyRef Name="UserReservationId" />
+    </Key>
+    <Property Name="UserReservationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="BoardId" Type="int" />
+    <Property Name="StartTime" Type="datetime" />
+    <Property Name="EndTime" Type="datetime" />
+    <Property Name="Amount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ReservationStatus" Type="nvarchar" MaxLength="50" />
+    <Property Name="PaymentStatus" Type="nvarchar" MaxLength="50" />
+    <Property Name="TotalDistance" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="RecordStatus" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="FacebookId" Type="nvarchar" MaxLength="250" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ImageUrl" Type="nvarchar" MaxLength="250" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Latitude" Type="decimal" Precision="18" Scale="5" />
+    <Property Name="Longitude" Type="decimal" Precision="18" Scale="5" />
+    <Property Name="DeviceType" Type="nvarchar" MaxLength="50" />
+    <Property Name="DeviceToken" Type="nvarchar" MaxLength="250" />
+    <Property Name="BatchCount" Type="int" />
+    <Property Name="Notifications" Type="bit" />
+    <Property Name="RecordStatus" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="PADLModelStoreContainer">
+    <EntitySet Name="AdminUsers" EntityType="Self.AdminUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Boards" EntityType="Self.Boards" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PromoCodes" EntityType="Self.PromoCodes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Stations" EntityType="Self.Stations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserNotifications" EntityType="Self.UserNotifications" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserReservationDetail" EntityType="Self.UserReservationDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserReservations" EntityType="Self.UserReservations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

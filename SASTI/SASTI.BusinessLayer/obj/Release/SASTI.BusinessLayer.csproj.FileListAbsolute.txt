@@ -1,0 +1,4 @@
+C:\Users\bilal\Downloads\SASTI\SASTI.BusinessLayer\obj\Release\SASTI.BusinessLayer.csprojAssemblyReference.cache
+C:\Users\bilal\Downloads\SASTI\SASTI.BusinessLayer\obj\Release\SASTI.BusinessLayer.csproj.CoreCompileInputs.cache
+D:\sachigrocery_apis\SASTI\SASTI.BusinessLayer\obj\Release\SASTI.BusinessLayer.csproj.AssemblyReference.cache
+D:\sachigrocery_apis\SASTI\SASTI.BusinessLayer\obj\Release\SASTI.BusinessLayer.csproj.CoreCompileInputs.cache

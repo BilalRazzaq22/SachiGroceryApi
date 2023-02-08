@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SASTI.BusinessLayer", "SASTI.BusinessLayer\SASTI.BusinessLayer.csproj", "{52DA9464-F450-401A-A804-549431105701}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SASTI.Common", "SASTI.Common\SASTI.Common.csproj", "{E50A7A34-3C85-456E-AD97-F0BFF85D3F69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SASTI.DataLayer", "SASTI.DataLayer\SASTI.DataLayer.csproj", "{449C40F6-D2D5-44E2-BE0B-516F984EA034}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SASTI.Models", "SASTI.Models\SASTI.Models.csproj", "{247EEAC8-F3AD-4B09-AE0C-06448FB02345}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SASTI", "SASTI\SASTI.csproj", "{43534469-3080-4709-91C7-F4A14C1E5C11}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52DA9464-F450-401A-A804-549431105701}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52DA9464-F450-401A-A804-549431105701}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52DA9464-F450-401A-A804-549431105701}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52DA9464-F450-401A-A804-549431105701}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E50A7A34-3C85-456E-AD97-F0BFF85D3F69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E50A7A34-3C85-456E-AD97-F0BFF85D3F69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E50A7A34-3C85-456E-AD97-F0BFF85D3F69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E50A7A34-3C85-456E-AD97-F0BFF85D3F69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{449C40F6-D2D5-44E2-BE0B-516F984EA034}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{449C40F6-D2D5-44E2-BE0B-516F984EA034}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{449C40F6-D2D5-44E2-BE0B-516F984EA034}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{449C40F6-D2D5-44E2-BE0B-516F984EA034}.Release|Any CPU.Build.0 = Release|Any CPU
+		{247EEAC8-F3AD-4B09-AE0C-06448FB02345}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{247EEAC8-F3AD-4B09-AE0C-06448FB02345}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{247EEAC8-F3AD-4B09-AE0C-06448FB02345}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{247EEAC8-F3AD-4B09-AE0C-06448FB02345}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43534469-3080-4709-91C7-F4A14C1E5C11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43534469-3080-4709-91C7-F4A14C1E5C11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43534469-3080-4709-91C7-F4A14C1E5C11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43534469-3080-4709-91C7-F4A14C1E5C11}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45
+		SolutionGuid = {23DB2D65-C1D6-4FD3-80D4-DFC5E1F68CA1}
+	EndGlobalSection
+EndGlobal

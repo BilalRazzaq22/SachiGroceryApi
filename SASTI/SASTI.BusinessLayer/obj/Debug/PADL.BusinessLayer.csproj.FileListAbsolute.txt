@@ -1,0 +1,23 @@
+C:\Users\Abid Hussain\Documents\Visual Studio 2013\Projects\PADL\PADL.BusinessLayer\bin\Debug\PADL.BusinessLayer.dll
+C:\Users\Abid Hussain\Documents\Visual Studio 2013\Projects\PADL\PADL.BusinessLayer\bin\Debug\PADL.BusinessLayer.pdb
+C:\Users\Abid Hussain\Documents\Visual Studio 2013\Projects\PADL\PADL.BusinessLayer\obj\Debug\PADL.BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\Abid Hussain\Documents\Visual Studio 2013\Projects\PADL\PADL.BusinessLayer\obj\Debug\PADL.BusinessLayer.dll
+C:\Users\Abid Hussain\Documents\Visual Studio 2013\Projects\PADL\PADL.BusinessLayer\obj\Debug\PADL.BusinessLayer.pdb
+D:\TFS\PADL\PADL.BusinessLayer\bin\Debug\PADL.BusinessLayer.dll
+D:\TFS\PADL\PADL.BusinessLayer\bin\Debug\PADL.BusinessLayer.pdb
+D:\TFS\PADL\PADL.BusinessLayer\bin\Debug\Braintree.dll
+D:\TFS\PADL\PADL.BusinessLayer\bin\Debug\PADL.Common.dll
+D:\TFS\PADL\PADL.BusinessLayer\bin\Debug\PADL.DataLayer.dll
+D:\TFS\PADL\PADL.BusinessLayer\bin\Debug\PADL.Models.dll
+D:\TFS\PADL\PADL.BusinessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\TFS\PADL\PADL.BusinessLayer\bin\Debug\EntityFramework.dll
+D:\TFS\PADL\PADL.BusinessLayer\bin\Debug\PADL.Common.pdb
+D:\TFS\PADL\PADL.BusinessLayer\bin\Debug\PADL.DataLayer.pdb
+D:\TFS\PADL\PADL.BusinessLayer\bin\Debug\PADL.Models.pdb
+D:\TFS\PADL\PADL.BusinessLayer\obj\Debug\PADL.BusinessLayer.csprojResolveAssemblyReference.cache
+D:\TFS\PADL\PADL.BusinessLayer\obj\Debug\PADL.BusinessLayer.dll
+D:\TFS\PADL\PADL.BusinessLayer\obj\Debug\PADL.BusinessLayer.pdb
+C:\Users\ah644\OneDrive\Desktop\Nickolas Tasks\WMS\WMS-web-new\Padl\PADL\PADL.BusinessLayer\obj\Debug\PADL.BusinessLayer.csprojAssemblyReference.cache
+C:\Users\ah644\OneDrive\Desktop\Nickolas Tasks\WMS\WMS-web-new\Padl\PADL\PADL.BusinessLayer\obj\Debug\PADL.BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\ah644\OneDrive\Desktop\Nickolas Tasks\WMS\WMS-web-new\Padl\PADL\PADL.BusinessLayer\obj\Debug\PADL.BusinessLayer.dll
+C:\Users\ah644\OneDrive\Desktop\Nickolas Tasks\WMS\WMS-web-new\Padl\PADL\PADL.BusinessLayer\obj\Debug\PADL.BusinessLayer.pdb

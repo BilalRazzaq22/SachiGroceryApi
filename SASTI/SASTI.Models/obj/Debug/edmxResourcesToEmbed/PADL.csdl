@@ -1,0 +1,522 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SASTIModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AdminUser">
+    <Key>
+      <PropertyRef Name="AdminUserId" />
+    </Key>
+    <Property Name="AdminUserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserRole" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StationId" Type="Int32" />
+    <Property Name="RecordStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PromoCode">
+    <Key>
+      <PropertyRef Name="PromoCodeId" />
+    </Key>
+    <Property Name="PromoCodeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PromoCodeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ValidFrom" Type="DateTime" Precision="3" />
+    <Property Name="ValidTo" Type="DateTime" Precision="3" />
+    <Property Name="UsageLimit" Type="Int32" />
+    <Property Name="Value" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ValueUnit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RecordStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="Modified" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="UserNotification">
+    <Key>
+      <PropertyRef Name="UserNotficationId" />
+    </Key>
+    <Property Name="UserNotficationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="UserReservationId" Type="Int32" />
+    <Property Name="NotficationType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NotificationHeader" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="NotificationMessage" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="IsRead" Type="Boolean" />
+    <Property Name="RecordStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="Modified" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="UserReservationDetail">
+    <Key>
+      <PropertyRef Name="UserReservationDetailId" />
+    </Key>
+    <Property Name="UserReservationDetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserReservationId" Type="Int32" />
+    <Property Name="Latitude" Type="Decimal" Precision="18" Scale="5" />
+    <Property Name="Longitude" Type="Decimal" Precision="18" Scale="5" />
+    <Property Name="TotalDistance" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FacebookId" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ImageUrl" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Latitude" Type="Decimal" Precision="18" Scale="5" />
+    <Property Name="Longitude" Type="Decimal" Precision="18" Scale="5" />
+    <Property Name="DeviceType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DeviceToken" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="BatchCount" Type="Int32" />
+    <Property Name="Notifications" Type="Boolean" />
+    <Property Name="RecordStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="BrainTreeCustomerId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="SASTIEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AdminUsers" EntityType="Self.AdminUser" />
+    <EntitySet Name="PromoCodes" EntityType="Self.PromoCode" />
+    <EntitySet Name="UserNotifications" EntityType="Self.UserNotification" />
+    <EntitySet Name="UserReservationDetails" EntityType="Self.UserReservationDetail" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="Stations" EntityType="SASTIModel.Station" />
+    <FunctionImport Name="SpInsertStation">
+      <Parameter Name="StationName" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="Password" Mode="In" Type="String" />
+      <Parameter Name="Address" Mode="In" Type="String" />
+      <Parameter Name="City" Mode="In" Type="String" />
+      <Parameter Name="State" Mode="In" Type="String" />
+      <Parameter Name="Zip" Mode="In" Type="String" />
+      <Parameter Name="Phone" Mode="In" Type="String" />
+      <Parameter Name="ImageUrl" Mode="In" Type="String" />
+      <Parameter Name="Latitude" Mode="In" Type="Decimal" />
+      <Parameter Name="Longitude" Mode="In" Type="Decimal" />
+      <Parameter Name="RecordStatus" Mode="In" Type="String" />
+      <Parameter Name="CreatedDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ModifiedDate" Mode="In" Type="DateTime" />
+      <Parameter Name="SalesTax" Mode="In" Type="Decimal" />
+      <Parameter Name="IsPrivate" Mode="In" Type="Boolean" />
+      <Parameter Name="OutParam" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SpUpdateStation">
+      <Parameter Name="StationId" Mode="In" Type="Int32" />
+      <Parameter Name="StationName" Mode="In" Type="String" />
+      <Parameter Name="Address" Mode="In" Type="String" />
+      <Parameter Name="City" Mode="In" Type="String" />
+      <Parameter Name="State" Mode="In" Type="String" />
+      <Parameter Name="Zip" Mode="In" Type="String" />
+      <Parameter Name="Phone" Mode="In" Type="String" />
+      <Parameter Name="ImageUrl" Mode="In" Type="String" />
+      <Parameter Name="Latitude" Mode="In" Type="Decimal" />
+      <Parameter Name="Longitude" Mode="In" Type="Decimal" />
+      <Parameter Name="RecordStatus" Mode="In" Type="String" />
+      <Parameter Name="ModifiedDate" Mode="In" Type="DateTime" />
+      <Parameter Name="SalesTax" Mode="In" Type="Decimal" />
+      <Parameter Name="IsPrivate" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="SpGetAllStations" ReturnType="Collection(SASTIModel.SpGetAllStations_Result)">
+      <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+      <Parameter Name="PageSize" Mode="In" Type="Int32" />
+      <Parameter Name="SortColumn" Mode="In" Type="String" />
+      <Parameter Name="SortOrder" Mode="In" Type="String" />
+      <Parameter Name="StationId" Mode="In" Type="Int32" />
+      <Parameter Name="StationName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SpGetAllBoards" ReturnType="Collection(SASTIModel.SpGetAllBoards_Result)">
+      <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+      <Parameter Name="PageSize" Mode="In" Type="Int32" />
+      <Parameter Name="SortColumn" Mode="In" Type="String" />
+      <Parameter Name="SortOrder" Mode="In" Type="String" />
+      <Parameter Name="BoardId" Mode="In" Type="Int32" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SpGetAllBoardsByBoardId" ReturnType="Collection(SASTIModel.SpGetAllBoardsByBoardId_Result)">
+      <Parameter Name="BoardId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SpGetAllStationsByStationId" ReturnType="Collection(SASTIModel.SpGetAllStationsByStationId_Result)">
+      <Parameter Name="StationId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SpGetAllBoardsByStationId" ReturnType="Collection(SASTIModel.SpGetAllBoardsByStationId_Result)">
+      <Parameter Name="StationId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SpGetAllStates" ReturnType="Collection(SASTIModel.SpGetAllStates_Result)" />
+    <FunctionImport Name="SpInsertBoard">
+      <Parameter Name="DeviceUDID" Mode="In" Type="String" />
+      <Parameter Name="StationId" Mode="In" Type="Int32" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="BoardType" Mode="In" Type="String" />
+      <Parameter Name="ImageUrl" Mode="In" Type="String" />
+      <Parameter Name="HourlyRate" Mode="In" Type="Decimal" />
+      <Parameter Name="Battery" Mode="In" Type="Decimal" />
+      <Parameter Name="BoardStatus" Mode="In" Type="String" />
+      <Parameter Name="Latitude" Mode="In" Type="Decimal" />
+      <Parameter Name="Longitude" Mode="In" Type="Decimal" />
+      <Parameter Name="RecordStatus" Mode="In" Type="String" />
+      <Parameter Name="CreatedDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ModifiedDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="SpUpdateBoard">
+      <Parameter Name="DeviceUDID" Mode="In" Type="String" />
+      <Parameter Name="StationId" Mode="In" Type="Int32" />
+      <Parameter Name="BoardId" Mode="In" Type="Int32" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="BoardType" Mode="In" Type="String" />
+      <Parameter Name="ImageUrl" Mode="In" Type="String" />
+      <Parameter Name="HourlyRate" Mode="In" Type="Decimal" />
+      <Parameter Name="Battery" Mode="In" Type="Decimal" />
+      <Parameter Name="BoardStatus" Mode="In" Type="String" />
+      <Parameter Name="Latitude" Mode="In" Type="Decimal" />
+      <Parameter Name="Longitude" Mode="In" Type="Decimal" />
+      <Parameter Name="RecordStatus" Mode="In" Type="String" />
+      <Parameter Name="ModifiedDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <EntitySet Name="States" EntityType="SASTIModel.State" />
+    <EntitySet Name="Boards" EntityType="SASTIModel.Board" />
+    <FunctionImport Name="SpGetAllUserReservationByBoardId" ReturnType="Collection(SASTIModel.SpGetAllUserReservationByBoardId_Result)">
+      <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+      <Parameter Name="PageSize" Mode="In" Type="Int32" />
+      <Parameter Name="SortColumn" Mode="In" Type="String" />
+      <Parameter Name="SortOrder" Mode="In" Type="String" />
+      <Parameter Name="BoardId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SpGetReservationDetailById" ReturnType="Collection(SASTIModel.SpGetReservationDetailById_Result)">
+      <Parameter Name="UserReservationId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SpApiGetNotificationsByUserId" ReturnType="Collection(SASTIModel.SpApiGetNotificationsByUserId_Result)">
+      <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+      <Parameter Name="PageSize" Mode="In" Type="Int32" />
+      <Parameter Name="SortColumn" Mode="In" Type="String" />
+      <Parameter Name="SortOrder" Mode="In" Type="String" />
+      <Parameter Name="UserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SpGetAllUsers" ReturnType="Collection(SASTIModel.SpGetAllUsers_Result)">
+      <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+      <Parameter Name="PageSize" Mode="In" Type="Int32" />
+      <Parameter Name="SortColumn" Mode="In" Type="String" />
+      <Parameter Name="SortOrder" Mode="In" Type="String" />
+      <Parameter Name="EmailName" Mode="In" Type="String" />
+      <Parameter Name="DateFrom" Mode="In" Type="DateTime" />
+      <Parameter Name="DateTo" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="SpGetAllUserReservationByUserId" ReturnType="Collection(SASTIModel.SpGetAllUserReservationByUserId_Result)">
+      <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+      <Parameter Name="PageSize" Mode="In" Type="Int32" />
+      <Parameter Name="SortColumn" Mode="In" Type="String" />
+      <Parameter Name="SortOrder" Mode="In" Type="String" />
+      <Parameter Name="UserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="UserReservations" EntityType="SASTIModel.UserReservation" />
+    <FunctionImport Name="SpApiGetAllUserReservationByUserId" ReturnType="Collection(SASTIModel.SpApiGetAllUserReservationByUserId_Result)">
+      <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+      <Parameter Name="PageSize" Mode="In" Type="Int32" />
+      <Parameter Name="SortColumn" Mode="In" Type="String" />
+      <Parameter Name="SortOrder" Mode="In" Type="String" />
+      <Parameter Name="UserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SpGetAllStationsByReservationId" ReturnType="Collection(SASTIModel.SpGetAllStationsByReservationId_Result)">
+      <Parameter Name="UserReservationId" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="Station">
+    <Key>
+      <PropertyRef Name="StationId" />
+    </Key>
+    <Property Name="StationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StationName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Zip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ImageUrl" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Latitude" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="Longitude" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="RecordStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="SalesTax" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="IsPrivate" Type="Boolean" />
+  </EntityType>
+  <ComplexType Name="SpGetAllStations_Result">
+    <Property Type="Int32" Name="StationId" Nullable="false" />
+    <Property Type="String" Name="StationName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Zip" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Phone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="State" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="Latitude" Nullable="true" Precision="18" Scale="5" />
+    <Property Type="Decimal" Name="Longitude" Nullable="true" Precision="18" Scale="5" />
+    <Property Type="String" Name="ImageUrl" Nullable="true" MaxLength="150" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="RecordStatus" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="250" />
+    <Property Type="Int64" Name="RowIndex" Nullable="true" />
+    <Property Type="Int32" Name="TotalRecords" Nullable="true" />
+    <Property Type="Decimal" Name="TotalPages" Nullable="true" Precision="37" Scale="0" />
+    <Property Type="Int32" Name="Start" Nullable="true" />
+    <Property Type="Int32" Name="End" Nullable="true" />
+    <Property Type="Decimal" Name="SalesTax" Nullable="true" Precision="18" Scale="4" />
+    <Property Type="Boolean" Name="IsPrivate" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Password" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SpGetAllBoards_Result">
+    <Property Type="Int32" Name="BoardId" Nullable="false" />
+    <Property Type="String" Name="DeviceUDID" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="StationId" Nullable="true" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BoardType" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ImageUrl" Nullable="true" MaxLength="250" />
+    <Property Type="Decimal" Name="Battery" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="BoardStatus" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="Latitude" Nullable="true" Precision="18" Scale="5" />
+    <Property Type="Decimal" Name="Longitude" Nullable="true" Precision="18" Scale="5" />
+    <Property Type="String" Name="RecordStatus" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="Int64" Name="RowIndex" Nullable="true" />
+    <Property Type="Int32" Name="TotalRecords" Nullable="true" />
+    <Property Type="Decimal" Name="TotalPages" Nullable="true" Precision="37" Scale="0" />
+    <Property Type="Int32" Name="Start" Nullable="true" />
+    <Property Type="Int32" Name="End" Nullable="true" />
+    <Property Type="Decimal" Name="HourlyRate" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="SpGetAllBoardsByBoardId_Result">
+    <Property Type="Int32" Name="BoardId" Nullable="false" />
+    <Property Type="String" Name="DeviceUDID" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="StationId" Nullable="true" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BoardType" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ImageUrl" Nullable="true" MaxLength="250" />
+    <Property Type="Decimal" Name="Battery" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="BoardStatus" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="Latitude" Nullable="true" Precision="18" Scale="5" />
+    <Property Type="Decimal" Name="Longitude" Nullable="true" Precision="18" Scale="5" />
+    <Property Type="String" Name="RecordStatus" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="HourlyRate" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Revenue" Nullable="false" Precision="38" Scale="2" />
+    <Property Type="Int32" Name="Rentals" Nullable="true" />
+    <Property Type="String" Name="StationName" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SpGetAllStationsByStationId_Result">
+    <Property Type="Int32" Name="StationId" Nullable="false" />
+    <Property Type="String" Name="StationName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="State" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Zip" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Phone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ImageUrl" Nullable="true" MaxLength="150" />
+    <Property Type="Decimal" Name="Latitude" Nullable="true" Precision="18" Scale="5" />
+    <Property Type="Decimal" Name="Longitude" Nullable="true" Precision="18" Scale="5" />
+    <Property Type="String" Name="RecordStatus" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="SpGetAllBoardsByStationId_Result">
+    <Property Type="Int32" Name="BoardId" Nullable="false" />
+    <Property Type="String" Name="DeviceUDID" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="StationId" Nullable="true" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BoardType" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ImageUrl" Nullable="true" MaxLength="250" />
+    <Property Type="Decimal" Name="Battery" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="BoardStatus" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="Latitude" Nullable="true" Precision="18" Scale="5" />
+    <Property Type="Decimal" Name="Longitude" Nullable="true" Precision="18" Scale="5" />
+    <Property Type="String" Name="RecordStatus" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="HourlyRate" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="SpGetAllStates_Result">
+    <Property Type="Int32" Name="StateId" Nullable="false" />
+    <Property Type="String" Name="StateName" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="StateId" />
+    </Key>
+    <Property Name="StateId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StateName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Board">
+    <Key>
+      <PropertyRef Name="BoardId" />
+    </Key>
+    <Property Name="BoardId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DeviceUDID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StationId" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BoardType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ImageUrl" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="HourlyRate" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Battery" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="BoardStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Latitude" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="Longitude" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="RecordStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <ComplexType Name="SpGetAllUserReservationByBoardId_Result">
+    <Property Type="Int32" Name="UserReservationId" Nullable="false" />
+    <Property Type="Int32" Name="UserId" Nullable="true" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ImageUrl" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="BoardId" Nullable="true" />
+    <Property Type="DateTime" Name="StartTime" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="EndTime" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="Amount" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="ReservationStatus" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PaymentStatus" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="TotalDistance" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="RecordStatus" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CreatedDate" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ModifiedDate" Nullable="true" MaxLength="50" />
+    <Property Type="Int64" Name="RowIndex" Nullable="true" />
+    <Property Type="Int32" Name="TotalRecords" Nullable="true" />
+    <Property Type="Decimal" Name="TotalPages" Nullable="true" Precision="37" Scale="0" />
+    <Property Type="Int32" Name="Start" Nullable="true" />
+    <Property Type="Int32" Name="End" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SpGetReservationDetailById_Result">
+    <Property Type="Int32" Name="UserReservationDetailId" Nullable="false" />
+    <Property Type="Int32" Name="UserReservationId" Nullable="true" />
+    <Property Type="Decimal" Name="Latitude" Nullable="true" Precision="18" Scale="5" />
+    <Property Type="Decimal" Name="Longitude" Nullable="true" Precision="18" Scale="5" />
+    <Property Type="Decimal" Name="TotalDistance" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="SpApiGetNotificationsByUserId_Result">
+    <Property Type="Int32" Name="UserNotficationId" Nullable="false" />
+    <Property Type="Int32" Name="UserId" Nullable="true" />
+    <Property Type="Int32" Name="UserReservationId" Nullable="true" />
+    <Property Type="String" Name="NotficationType" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="NotificationHeader" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="NotificationMessage" Nullable="true" MaxLength="250" />
+    <Property Type="Boolean" Name="IsRead" Nullable="true" />
+    <Property Type="String" Name="RecordStatus" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="Modified" Nullable="true" Precision="23" />
+    <Property Type="Int64" Name="RowIndex" Nullable="true" />
+    <Property Type="Int32" Name="TotalRecords" Nullable="true" />
+    <Property Type="Decimal" Name="TotalPages" Nullable="true" Precision="37" Scale="0" />
+    <Property Type="Int32" Name="Start" Nullable="true" />
+    <Property Type="Int32" Name="End" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SpGetAllUsers_Result">
+    <Property Type="Int32" Name="UserId" Nullable="false" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Password" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="FacebookId" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ImageUrl" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Phone" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="Latitude" Nullable="true" Precision="18" Scale="5" />
+    <Property Type="Decimal" Name="Longitude" Nullable="true" Precision="18" Scale="5" />
+    <Property Type="String" Name="DeviceType" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DeviceToken" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="BatchCount" Nullable="true" />
+    <Property Type="Boolean" Name="Notifications" Nullable="true" />
+    <Property Type="String" Name="RecordStatus" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="Int64" Name="RowIndex" Nullable="true" />
+    <Property Type="Int32" Name="TotalRecords" Nullable="true" />
+    <Property Type="Decimal" Name="TotalPages" Nullable="true" Precision="37" Scale="0" />
+    <Property Type="Int32" Name="Start" Nullable="true" />
+    <Property Type="Int32" Name="End" Nullable="true" />
+    <Property Type="Int32" Name="UserReservationCount" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SpGetAllUserReservationByUserId_Result">
+    <Property Type="Int32" Name="UserReservationId" Nullable="false" />
+    <Property Type="Int32" Name="UserId" Nullable="true" />
+    <Property Type="Int32" Name="BoardId" Nullable="true" />
+    <Property Type="DateTime" Name="StartTime" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="EndTime" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="Amount" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="ReservationStatus" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PaymentStatus" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="TotalDistance" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="RecordStatus" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CreatedDate" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ModifiedDate" Nullable="true" MaxLength="50" />
+    <Property Type="Int64" Name="RowIndex" Nullable="true" />
+    <Property Type="Int32" Name="TotalRecords" Nullable="true" />
+    <Property Type="Decimal" Name="TotalPages" Nullable="true" Precision="37" Scale="0" />
+    <Property Type="Int32" Name="Start" Nullable="true" />
+    <Property Type="Int32" Name="End" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="UserReservation">
+    <Key>
+      <PropertyRef Name="UserReservationId" />
+    </Key>
+    <Property Name="UserReservationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="BoardId" Type="Int32" />
+    <Property Name="StartTime" Type="DateTime" Precision="3" />
+    <Property Name="EndTime" Type="DateTime" Precision="3" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ReservationStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PaymentStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AuthorizedAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TransactionId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TotalDistance" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="RecordStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <ComplexType Name="SpApiGetAllUserReservationByUserId_Result">
+    <Property Type="Int32" Name="UserReservationId" Nullable="false" />
+    <Property Type="Int32" Name="UserId" Nullable="true" />
+    <Property Type="Int32" Name="BoardId" Nullable="true" />
+    <Property Type="DateTime" Name="StartTime" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="EndTime" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="Amount" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="ReservationStatus" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PaymentStatus" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="TotalDistance" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="StationId" Nullable="false" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="ImageUrl" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="StationName" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="IsPrivate" Nullable="true" />
+    <Property Type="Decimal" Name="Latitude" Nullable="true" Precision="18" Scale="6" />
+    <Property Type="Decimal" Name="Longitude" Nullable="true" Precision="18" Scale="6" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="State" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Zip" Nullable="true" MaxLength="50" />
+    <Property Type="Int64" Name="RowIndex" Nullable="true" />
+    <Property Type="Int32" Name="TotalRecords" Nullable="true" />
+    <Property Type="Decimal" Name="TotalPages" Nullable="true" Precision="37" Scale="0" />
+    <Property Type="Int32" Name="Start" Nullable="true" />
+    <Property Type="Int32" Name="End" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SpGetAllStationsByReservationId_Result">
+    <Property Type="Int32" Name="StationId" Nullable="false" />
+    <Property Type="String" Name="StationName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="State" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Zip" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Phone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ImageUrl" Nullable="true" MaxLength="150" />
+    <Property Type="Decimal" Name="Latitude" Nullable="true" Precision="18" Scale="6" />
+    <Property Type="Decimal" Name="Longitude" Nullable="true" Precision="18" Scale="6" />
+    <Property Type="String" Name="RecordStatus" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+  </ComplexType>
+</Schema>

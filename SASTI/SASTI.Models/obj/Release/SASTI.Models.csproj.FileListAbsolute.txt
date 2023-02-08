@@ -1,0 +1,35 @@
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI.Models\bin\Release\SASTI.Models.dll.config
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI.Models\bin\Release\SASTI.Models.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI.Models\bin\Release\SASTI.Models.pdb
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI.Models\bin\Release\EntityFramework.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI.Models\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI.Models\bin\Release\EntityFramework.xml
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI.Models\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI.Models\obj\Release\SASTI.Models.csprojAssemblyReference.cache
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI.Models\obj\Release\SASTI.Models.csproj.CoreCompileInputs.cache
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI.Models\obj\Release\SASTI.Models.csproj.CopyComplete
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI.Models\obj\Release\SASTI.Models.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI.Models\obj\Release\SASTI.Models.pdb
+C:\Users\bilal\Downloads\SASTI\SASTI.Models\bin\Release\SASTI.Models.dll.config
+C:\Users\bilal\Downloads\SASTI\SASTI.Models\bin\Release\SASTI.Models.dll
+C:\Users\bilal\Downloads\SASTI\SASTI.Models\bin\Release\SASTI.Models.pdb
+C:\Users\bilal\Downloads\SASTI\SASTI.Models\bin\Release\EntityFramework.dll
+C:\Users\bilal\Downloads\SASTI\SASTI.Models\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\bilal\Downloads\SASTI\SASTI.Models\bin\Release\EntityFramework.xml
+C:\Users\bilal\Downloads\SASTI\SASTI.Models\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\bilal\Downloads\SASTI\SASTI.Models\obj\Release\SASTI.Models.csproj.CoreCompileInputs.cache
+C:\Users\bilal\Downloads\SASTI\SASTI.Models\obj\Release\SASTI.Models.csproj.CopyComplete
+C:\Users\bilal\Downloads\SASTI\SASTI.Models\obj\Release\SASTI.Models.dll
+C:\Users\bilal\Downloads\SASTI\SASTI.Models\obj\Release\SASTI.Models.pdb
+D:\sachigrocery_apis\SASTI\SASTI.Models\bin\Release\SASTI.Models.dll.config
+D:\sachigrocery_apis\SASTI\SASTI.Models\bin\Release\SASTI.Models.dll
+D:\sachigrocery_apis\SASTI\SASTI.Models\bin\Release\SASTI.Models.pdb
+D:\sachigrocery_apis\SASTI\SASTI.Models\bin\Release\EntityFramework.dll
+D:\sachigrocery_apis\SASTI\SASTI.Models\bin\Release\EntityFramework.SqlServer.dll
+D:\sachigrocery_apis\SASTI\SASTI.Models\bin\Release\EntityFramework.xml
+D:\sachigrocery_apis\SASTI\SASTI.Models\bin\Release\EntityFramework.SqlServer.xml
+D:\sachigrocery_apis\SASTI\SASTI.Models\obj\Release\SASTI.Models.csproj.AssemblyReference.cache
+D:\sachigrocery_apis\SASTI\SASTI.Models\obj\Release\SASTI.Models.csproj.CoreCompileInputs.cache
+D:\sachigrocery_apis\SASTI\SASTI.Models\obj\Release\SASTI.Models.csproj.CopyComplete
+D:\sachigrocery_apis\SASTI\SASTI.Models\obj\Release\SASTI.Models.dll
+D:\sachigrocery_apis\SASTI\SASTI.Models\obj\Release\SASTI.Models.pdb

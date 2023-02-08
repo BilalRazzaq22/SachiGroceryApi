@@ -1,0 +1,4 @@
+C:\Users\bilal\Downloads\SASTI\SASTI.DataLayer\obj\Release\SASTI.DataLayer.csprojAssemblyReference.cache
+C:\Users\bilal\Downloads\SASTI\SASTI.DataLayer\obj\Release\SASTI.DataLayer.csproj.CoreCompileInputs.cache
+D:\sachigrocery_apis\SASTI\SASTI.DataLayer\obj\Release\SASTI.DataLayer.csproj.AssemblyReference.cache
+D:\sachigrocery_apis\SASTI\SASTI.DataLayer\obj\Release\SASTI.DataLayer.csproj.CoreCompileInputs.cache

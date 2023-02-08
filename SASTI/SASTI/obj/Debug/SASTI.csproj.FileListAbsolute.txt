@@ -1,0 +1,329 @@
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\obj\Debug\SASTI.csprojAssemblyReference.cache
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\obj\Debug\SASTI.csproj.CoreCompileInputs.cache
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\SASTI.dll.config
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\SASTI.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\SASTI.pdb
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\Antlr3.Runtime.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\EntityFramework.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\EntityFramework.SqlServer.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\Newtonsoft.Json.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\SASTI.Common.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\SASTI.Models.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Net.Http.Formatting.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.Helpers.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.Http.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.Http.WebHost.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.Mvc.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.Optimization.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.Razor.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.WebPages.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.WebPages.Razor.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\WebGrease.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\SASTI.Common.pdb
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\SASTI.Models.pdb
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\SASTI.Models.dll.config
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\EntityFramework.xml
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\EntityFramework.SqlServer.xml
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\Newtonsoft.Json.xml
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Net.Http.Formatting.xml
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.Helpers.xml
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.Http.xml
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.Http.WebHost.xml
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.Mvc.xml
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.Razor.xml
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.WebPages.xml
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.WebPages.Razor.xml
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.Optimization.xml
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\Antlr3.Runtime.pdb
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\obj\Debug\SASTI.csproj.CopyComplete
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\obj\Debug\SASTI.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\obj\Debug\SASTI.pdb
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\SASTI.BusinessLayer.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\SASTI.DataLayer.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\SASTI.BusinessLayer.pdb
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\SASTI.DataLayer.pdb
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\SASTI.dll.config
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\SASTI.dll
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\SASTI.pdb
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\Antlr3.Runtime.dll
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\EntityFramework.dll
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\EntityFramework.SqlServer.dll
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\Newtonsoft.Json.dll
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\SASTI.BusinessLayer.dll
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\SASTI.Common.dll
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\SASTI.DataLayer.dll
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\SASTI.Models.dll
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Net.Http.Formatting.dll
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.Helpers.dll
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.Http.dll
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.Http.WebHost.dll
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.Mvc.dll
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.Optimization.dll
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.Razor.dll
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.WebPages.dll
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.WebPages.Razor.dll
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\WebGrease.dll
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\SASTI.BusinessLayer.pdb
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\SASTI.Common.pdb
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\SASTI.DataLayer.pdb
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\SASTI.Models.pdb
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\SASTI.Models.dll.config
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\EntityFramework.xml
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\EntityFramework.SqlServer.xml
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\Newtonsoft.Json.xml
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Net.Http.Formatting.xml
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.Helpers.xml
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.Http.xml
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.Http.WebHost.xml
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.Mvc.xml
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.Razor.xml
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.WebPages.xml
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.WebPages.Razor.xml
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.Optimization.xml
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\bin\Antlr3.Runtime.pdb
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\obj\Debug\SASTI.csproj.AssemblyReference.cache
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\obj\Debug\SASTI.csproj.CoreCompileInputs.cache
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\obj\Debug\SASTI.csproj.CopyComplete
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\obj\Debug\SASTI.dll
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI\obj\Debug\SASTI.pdb
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\SASTI.dll.config
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\SASTI.dll
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\SASTI.pdb
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\Antlr3.Runtime.dll
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\EntityFramework.dll
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\EntityFramework.SqlServer.dll
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\Newtonsoft.Json.dll
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\SASTI.BusinessLayer.dll
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\SASTI.Common.dll
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\SASTI.DataLayer.dll
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\SASTI.Models.dll
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\System.Net.Http.Formatting.dll
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\System.Web.Helpers.dll
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\System.Web.Http.dll
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\System.Web.Http.WebHost.dll
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\System.Web.Mvc.dll
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\System.Web.Optimization.dll
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\System.Web.Razor.dll
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\System.Web.WebPages.dll
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\System.Web.WebPages.Razor.dll
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\WebGrease.dll
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\SASTI.BusinessLayer.pdb
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\SASTI.Common.pdb
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\SASTI.DataLayer.pdb
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\SASTI.Models.pdb
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\SASTI.Models.dll.config
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\EntityFramework.xml
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\EntityFramework.SqlServer.xml
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\Newtonsoft.Json.xml
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\System.Net.Http.Formatting.xml
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\System.Web.Helpers.xml
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\System.Web.Http.xml
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\System.Web.Http.WebHost.xml
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\System.Web.Mvc.xml
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\System.Web.Razor.xml
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\System.Web.WebPages.xml
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\System.Web.WebPages.Razor.xml
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\System.Web.Optimization.xml
+C:\Users\bilal\Downloads\SASTI\SASTI\bin\Antlr3.Runtime.pdb
+C:\Users\bilal\Downloads\SASTI\SASTI\obj\Debug\SASTI.csprojAssemblyReference.cache
+C:\Users\bilal\Downloads\SASTI\SASTI\obj\Debug\SASTI.csproj.CoreCompileInputs.cache
+C:\Users\bilal\Downloads\SASTI\SASTI\obj\Debug\SASTI.csproj.CopyComplete
+C:\Users\bilal\Downloads\SASTI\SASTI\obj\Debug\SASTI.dll
+C:\Users\bilal\Downloads\SASTI\SASTI\obj\Debug\SASTI.pdb
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\SASTI.dll.config
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\SASTI.dll
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\SASTI.pdb
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\Antlr3.Runtime.dll
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\EntityFramework.dll
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\EntityFramework.SqlServer.dll
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\Newtonsoft.Json.dll
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\SASTI.BusinessLayer.dll
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\SASTI.Common.dll
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\SASTI.DataLayer.dll
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\SASTI.Models.dll
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\System.Net.Http.Formatting.dll
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\System.Web.Helpers.dll
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\System.Web.Http.dll
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\System.Web.Http.WebHost.dll
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\System.Web.Mvc.dll
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\System.Web.Optimization.dll
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\System.Web.Razor.dll
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\System.Web.WebPages.dll
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\System.Web.WebPages.Razor.dll
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\WebGrease.dll
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\SASTI.BusinessLayer.pdb
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\SASTI.Common.pdb
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\SASTI.DataLayer.pdb
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\SASTI.Models.pdb
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\SASTI.Models.dll.config
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\EntityFramework.xml
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\EntityFramework.SqlServer.xml
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\Newtonsoft.Json.xml
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\System.Net.Http.Formatting.xml
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\System.Web.Helpers.xml
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\System.Web.Http.xml
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\System.Web.Http.WebHost.xml
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\System.Web.Mvc.xml
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\System.Web.Razor.xml
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\System.Web.WebPages.xml
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\System.Web.WebPages.Razor.xml
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\System.Web.Optimization.xml
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\bin\Antlr3.Runtime.pdb
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\obj\Debug\SASTI.csprojAssemblyReference.cache
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\obj\Debug\SASTI.csproj.CoreCompileInputs.cache
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\obj\Debug\SASTI.csproj.CopyComplete
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\obj\Debug\SASTI.dll
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI\obj\Debug\SASTI.pdb
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\EntityFramework.dll
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\SASTI.dll.config
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\SASTI.dll
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\SASTI.pdb
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\Antlr3.Runtime.dll
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\EntityFramework.SqlServer.dll
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\Newtonsoft.Json.dll
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\SASTI.BusinessLayer.dll
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\SASTI.Common.dll
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\SASTI.DataLayer.dll
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\SASTI.Models.dll
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Net.Http.Formatting.dll
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Web.Helpers.dll
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Web.Http.dll
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Web.Http.WebHost.dll
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Web.Mvc.dll
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Web.Optimization.dll
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Web.Razor.dll
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Web.WebPages.dll
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Web.WebPages.Razor.dll
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\WebGrease.dll
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\SASTI.BusinessLayer.pdb
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\SASTI.Common.pdb
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\SASTI.DataLayer.pdb
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\SASTI.Models.pdb
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\SASTI.Models.dll.config
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\EntityFramework.xml
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\EntityFramework.SqlServer.xml
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\Newtonsoft.Json.xml
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Net.Http.Formatting.xml
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Web.Helpers.xml
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Web.Http.xml
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Web.Http.WebHost.xml
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Web.Mvc.xml
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Web.Razor.xml
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Web.WebPages.xml
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Web.WebPages.Razor.xml
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Web.Optimization.xml
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\bin\Antlr3.Runtime.pdb
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\obj\Debug\SASTI.csprojAssemblyReference.cache
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\obj\Debug\SASTI.csproj.CoreCompileInputs.cache
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\obj\Debug\SASTI.csproj.CopyComplete
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\obj\Debug\SASTI.dll
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI\obj\Debug\SASTI.pdb
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\SASTI.dll.config
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\SASTI.dll
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\SASTI.pdb
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\Antlr3.Runtime.dll
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\EntityFramework.dll
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\EntityFramework.SqlServer.dll
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\Microsoft.Web.Infrastructure.dll
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\Newtonsoft.Json.dll
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\SASTI.BusinessLayer.dll
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\SASTI.Common.dll
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\SASTI.DataLayer.dll
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\SASTI.Models.dll
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Net.Http.Formatting.dll
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Web.Helpers.dll
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Web.Http.dll
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Web.Http.WebHost.dll
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Web.Mvc.dll
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Web.Optimization.dll
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Web.Razor.dll
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Web.WebPages.Deployment.dll
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Web.WebPages.dll
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Web.WebPages.Razor.dll
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\WebGrease.dll
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\SASTI.BusinessLayer.pdb
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\SASTI.Common.pdb
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\SASTI.DataLayer.pdb
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\SASTI.Models.pdb
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\SASTI.Models.dll.config
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\EntityFramework.xml
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\EntityFramework.SqlServer.xml
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\Newtonsoft.Json.xml
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Net.Http.Formatting.xml
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Web.Helpers.xml
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Web.Http.xml
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Web.Http.WebHost.xml
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Web.Mvc.xml
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Web.Razor.xml
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Web.WebPages.xml
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Web.WebPages.Deployment.xml
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Web.WebPages.Razor.xml
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\System.Web.Optimization.xml
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\bin\Antlr3.Runtime.pdb
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\obj\Debug\SASTI.csproj.AssemblyReference.cache
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\obj\Debug\SASTI.csproj.CoreCompileInputs.cache
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\obj\Debug\SASTI.csproj.CopyComplete
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\obj\Debug\SASTI.dll
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI\obj\Debug\SASTI.pdb
+D:\sachigrocery_apis\SASTI\SASTI\bin\SASTI.dll.config
+D:\sachigrocery_apis\SASTI\SASTI\bin\SASTI.dll
+D:\sachigrocery_apis\SASTI\SASTI\bin\SASTI.pdb
+D:\sachigrocery_apis\SASTI\SASTI\bin\Antlr3.Runtime.dll
+D:\sachigrocery_apis\SASTI\SASTI\bin\EntityFramework.dll
+D:\sachigrocery_apis\SASTI\SASTI\bin\EntityFramework.SqlServer.dll
+D:\sachigrocery_apis\SASTI\SASTI\bin\Microsoft.Web.Infrastructure.dll
+D:\sachigrocery_apis\SASTI\SASTI\bin\Newtonsoft.Json.dll
+D:\sachigrocery_apis\SASTI\SASTI\bin\SASTI.BusinessLayer.dll
+D:\sachigrocery_apis\SASTI\SASTI\bin\SASTI.Common.dll
+D:\sachigrocery_apis\SASTI\SASTI\bin\SASTI.DataLayer.dll
+D:\sachigrocery_apis\SASTI\SASTI\bin\SASTI.Models.dll
+D:\sachigrocery_apis\SASTI\SASTI\bin\System.Net.Http.Formatting.dll
+D:\sachigrocery_apis\SASTI\SASTI\bin\System.Web.Helpers.dll
+D:\sachigrocery_apis\SASTI\SASTI\bin\System.Web.Http.dll
+D:\sachigrocery_apis\SASTI\SASTI\bin\System.Web.Http.WebHost.dll
+D:\sachigrocery_apis\SASTI\SASTI\bin\System.Web.Mvc.dll
+D:\sachigrocery_apis\SASTI\SASTI\bin\System.Web.Optimization.dll
+D:\sachigrocery_apis\SASTI\SASTI\bin\System.Web.Razor.dll
+D:\sachigrocery_apis\SASTI\SASTI\bin\System.Web.WebPages.Deployment.dll
+D:\sachigrocery_apis\SASTI\SASTI\bin\System.Web.WebPages.dll
+D:\sachigrocery_apis\SASTI\SASTI\bin\System.Web.WebPages.Razor.dll
+D:\sachigrocery_apis\SASTI\SASTI\bin\WebGrease.dll
+D:\sachigrocery_apis\SASTI\SASTI\bin\SASTI.BusinessLayer.pdb
+D:\sachigrocery_apis\SASTI\SASTI\bin\SASTI.Common.pdb
+D:\sachigrocery_apis\SASTI\SASTI\bin\SASTI.DataLayer.pdb
+D:\sachigrocery_apis\SASTI\SASTI\bin\SASTI.Models.pdb
+D:\sachigrocery_apis\SASTI\SASTI\bin\SASTI.Models.dll.config
+D:\sachigrocery_apis\SASTI\SASTI\bin\EntityFramework.xml
+D:\sachigrocery_apis\SASTI\SASTI\bin\EntityFramework.SqlServer.xml
+D:\sachigrocery_apis\SASTI\SASTI\bin\Newtonsoft.Json.xml
+D:\sachigrocery_apis\SASTI\SASTI\bin\System.Net.Http.Formatting.xml
+D:\sachigrocery_apis\SASTI\SASTI\bin\System.Web.Helpers.xml
+D:\sachigrocery_apis\SASTI\SASTI\bin\System.Web.Http.xml
+D:\sachigrocery_apis\SASTI\SASTI\bin\System.Web.Http.WebHost.xml
+D:\sachigrocery_apis\SASTI\SASTI\bin\System.Web.Mvc.xml
+D:\sachigrocery_apis\SASTI\SASTI\bin\System.Web.Razor.xml
+D:\sachigrocery_apis\SASTI\SASTI\bin\System.Web.WebPages.xml
+D:\sachigrocery_apis\SASTI\SASTI\bin\System.Web.WebPages.Deployment.xml
+D:\sachigrocery_apis\SASTI\SASTI\bin\System.Web.WebPages.Razor.xml
+D:\sachigrocery_apis\SASTI\SASTI\bin\System.Web.Optimization.xml
+D:\sachigrocery_apis\SASTI\SASTI\bin\Antlr3.Runtime.pdb
+D:\sachigrocery_apis\SASTI\SASTI\obj\Debug\SASTI.csproj.AssemblyReference.cache
+D:\sachigrocery_apis\SASTI\SASTI\obj\Debug\SASTI.csproj.CoreCompileInputs.cache
+D:\sachigrocery_apis\SASTI\SASTI\obj\Debug\SASTI.csproj.CopyComplete
+D:\sachigrocery_apis\SASTI\SASTI\obj\Debug\SASTI.dll
+D:\sachigrocery_apis\SASTI\SASTI\obj\Debug\SASTI.pdb

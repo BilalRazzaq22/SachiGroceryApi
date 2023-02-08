@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <History>True|2022-11-21T16:42:15.9786372Z;True|2022-11-21T20:48:26.9317444+05:00;True|2022-09-27T20:51:12.4652753+05:00;True|2022-09-22T21:01:51.1282263+05:00;True|2022-09-19T14:15:09.9104226+05:00;True|2022-09-18T23:39:13.2830468+05:00;True|2022-07-27T15:36:10.2264916+05:00;True|2022-07-21T23:22:16.0986196+05:00;True|2022-07-21T23:13:55.4980541+05:00;True|2022-06-19T17:23:21.3222695+05:00;True|2022-06-19T17:18:12.2272022+05:00;True|2022-06-19T17:13:18.0702946+05:00;True|2022-06-17T16:09:49.8938892+05:00;True|2022-06-16T22:12:12.2411128+05:00;True|2022-06-16T18:55:51.9693700+05:00;True|2022-06-09T12:06:16.9523945+05:00;True|2022-06-08T12:25:08.0119122+05:00;True|2022-06-01T14:16:23.5123666+05:00;True|2022-05-31T22:14:12.3625588+05:00;True|2022-05-31T15:29:29.4393530+05:00;True|2022-05-30T14:32:09.8353976+05:00;True|2022-05-28T14:04:42.1172576+05:00;True|2022-05-26T13:51:56.4421413+05:00;True|2022-05-22T13:56:07.8126838+05:00;False|2022-05-22T13:53:04.7818637+05:00;False|2022-05-22T13:52:20.7712993+05:00;False|2022-05-22T13:50:57.9721479+05:00;</History>
+    <_PublishTargetUrl>D:\Remote\projects\PublishAPI</_PublishTargetUrl>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>05/22/2022 13:16:12</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>05/22/2022 13:16:12</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>05/22/2022 13:16:12</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>05/22/2022 13:16:12</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.EnterpriseLibrary.Common.dll">
+      <publishTime>07/08/2021 15:07:07</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.EnterpriseLibrary.Data.dll">
+      <publishTime>07/08/2021 15:07:07</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.ObjectBuilder.dll">
+      <publishTime>07/08/2021 15:07:07</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>05/22/2022 13:16:13</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>05/22/2022 13:16:13</publishTime>
+    </File>
+    <File Include="bin/SASTI.BusinessLayer.dll">
+      <publishTime>11/21/2022 21:41:52</publishTime>
+    </File>
+    <File Include="bin/SASTI.BusinessLayer.pdb">
+      <publishTime>11/21/2022 21:41:52</publishTime>
+    </File>
+    <File Include="bin/SASTI.Common.dll">
+      <publishTime>11/21/2022 21:41:52</publishTime>
+    </File>
+    <File Include="bin/SASTI.Common.pdb">
+      <publishTime>11/21/2022 21:41:52</publishTime>
+    </File>
+    <File Include="bin/SASTI.DataLayer.dll">
+      <publishTime>11/21/2022 21:41:51</publishTime>
+    </File>
+    <File Include="bin/SASTI.DataLayer.pdb">
+      <publishTime>11/21/2022 21:41:51</publishTime>
+    </File>
+    <File Include="bin/SASTI.dll">
+      <publishTime>11/21/2022 21:41:52</publishTime>
+    </File>
+    <File Include="bin/SASTI.Models.dll">
+      <publishTime>11/21/2022 21:41:51</publishTime>
+    </File>
+    <File Include="bin/SASTI.Models.dll.config">
+      <publishTime>10/09/2022 17:09:04</publishTime>
+    </File>
+    <File Include="bin/SASTI.Models.pdb">
+      <publishTime>11/21/2022 21:41:51</publishTime>
+    </File>
+    <File Include="bin/SASTI.pdb">
+      <publishTime>11/21/2022 21:41:52</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>05/22/2022 13:16:13</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>05/22/2022 13:16:13</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>05/22/2022 13:16:13</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>05/22/2022 13:16:13</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>05/22/2022 13:16:13</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>05/22/2022 13:16:13</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>05/22/2022 13:16:13</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>05/22/2022 13:16:13</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>05/22/2022 13:16:13</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>05/22/2022 13:16:13</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>05/22/2022 13:16:13</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>01/02/2018 20:03:16</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>01/02/2018 20:03:16</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>07/17/2021 15:23:42</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>05/26/2022 12:29:30</publishTime>
+    </File>
+    <File Include="Scripts/angular-file.js">
+      <publishTime>01/11/2018 18:06:28</publishTime>
+    </File>
+    <File Include="Scripts/dirPagination.js">
+      <publishTime>01/12/2018 14:50:40</publishTime>
+    </File>
+    <File Include="Scripts/dirPagination.tpl.html">
+      <publishTime>01/12/2018 14:50:42</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>01/02/2018 20:03:33</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>01/02/2018 20:03:34</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>01/02/2018 20:03:34</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>07/17/2021 17:22:33</publishTime>
+    </File>
+    <File Include="Views/Home/About.cshtml">
+      <publishTime>01/02/2018 20:03:16</publishTime>
+    </File>
+    <File Include="Views/Home/Contact.cshtml">
+      <publishTime>01/02/2018 20:03:16</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>01/02/2018 20:03:16</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>01/02/2018 20:03:16</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>01/02/2018 20:03:16</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>07/17/2021 15:23:42</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>01/02/2018 20:03:16</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>11/21/2022 21:42:15</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

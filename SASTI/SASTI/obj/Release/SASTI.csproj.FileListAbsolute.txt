@@ -1,0 +1,47 @@
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\SASTI.dll.config
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\SASTI.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\SASTI.pdb
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\Antlr3.Runtime.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\EntityFramework.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\EntityFramework.SqlServer.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\Newtonsoft.Json.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\SASTI.Common.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\SASTI.Models.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Net.Http.Formatting.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.Helpers.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.Http.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.Http.WebHost.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.Mvc.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.Optimization.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.Razor.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.WebPages.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.WebPages.Razor.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\WebGrease.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\SASTI.Common.pdb
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\SASTI.Models.pdb
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\SASTI.Models.dll.config
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\EntityFramework.xml
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\EntityFramework.SqlServer.xml
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\Newtonsoft.Json.xml
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Net.Http.Formatting.xml
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.Helpers.xml
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.Http.xml
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.Http.WebHost.xml
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.Mvc.xml
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.Razor.xml
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.WebPages.xml
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.WebPages.Razor.xml
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\System.Web.Optimization.xml
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\bin\Antlr3.Runtime.pdb
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\obj\Release\SASTI.csprojAssemblyReference.cache
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\obj\Release\SASTI.csproj.CoreCompileInputs.cache
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\obj\Release\SASTI.csproj.CopyComplete
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\obj\Release\SASTI.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI\obj\Release\SASTI.pdb
+C:\Users\bilal\Downloads\SASTI\SASTI\obj\Release\SASTI.csprojAssemblyReference.cache
+C:\Users\bilal\Downloads\SASTI\SASTI\obj\Release\SASTI.csproj.CoreCompileInputs.cache
+D:\sachigrocery_apis\SASTI\SASTI\obj\Release\SASTI.csproj.AssemblyReference.cache
+D:\sachigrocery_apis\SASTI\SASTI\obj\Release\SASTI.csproj.CoreCompileInputs.cache

@@ -1,0 +1,112 @@
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI.BusinessLayer\obj\Debug\SASTI.BusinessLayer.csprojAssemblyReference.cache
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI.BusinessLayer\obj\Debug\SASTI.BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.BusinessLayer.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.BusinessLayer.pdb
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.DataLayer.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.Models.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI.BusinessLayer\bin\Debug\EntityFramework.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.DataLayer.pdb
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.Models.pdb
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.Models.dll.config
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI.BusinessLayer\obj\Debug\SASTI.BusinessLayer.csproj.CopyComplete
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI.BusinessLayer\obj\Debug\SASTI.BusinessLayer.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI.BusinessLayer\obj\Debug\SASTI.BusinessLayer.pdb
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.Common.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI.BusinessLayer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ah644\OneDrive\Desktop\UsmanZia Projects\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.Common.pdb
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.BusinessLayer.dll
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.BusinessLayer.pdb
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.Common.dll
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.DataLayer.dll
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.Models.dll
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI.BusinessLayer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI.BusinessLayer\bin\Debug\EntityFramework.dll
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.Common.pdb
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.DataLayer.pdb
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.Models.pdb
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.Models.dll.config
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI.BusinessLayer\obj\Debug\SASTI.BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI.BusinessLayer\obj\Debug\SASTI.BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI.BusinessLayer\obj\Debug\SASTI.BusinessLayer.csproj.CopyComplete
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI.BusinessLayer\obj\Debug\SASTI.BusinessLayer.dll
+C:\Users\Abid\Desktop\UsmanZia Projects\SASTI\SASTI.BusinessLayer\obj\Debug\SASTI.BusinessLayer.pdb
+C:\Users\bilal\Downloads\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.BusinessLayer.dll
+C:\Users\bilal\Downloads\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.BusinessLayer.pdb
+C:\Users\bilal\Downloads\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.Common.dll
+C:\Users\bilal\Downloads\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.DataLayer.dll
+C:\Users\bilal\Downloads\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.Models.dll
+C:\Users\bilal\Downloads\SASTI\SASTI.BusinessLayer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\bilal\Downloads\SASTI\SASTI.BusinessLayer\bin\Debug\EntityFramework.dll
+C:\Users\bilal\Downloads\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.Common.pdb
+C:\Users\bilal\Downloads\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.DataLayer.pdb
+C:\Users\bilal\Downloads\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.Models.pdb
+C:\Users\bilal\Downloads\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.Models.dll.config
+C:\Users\bilal\Downloads\SASTI\SASTI.BusinessLayer\obj\Debug\SASTI.BusinessLayer.csprojAssemblyReference.cache
+C:\Users\bilal\Downloads\SASTI\SASTI.BusinessLayer\obj\Debug\SASTI.BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\bilal\Downloads\SASTI\SASTI.BusinessLayer\obj\Debug\SASTI.BusinessLayer.csproj.CopyComplete
+C:\Users\bilal\Downloads\SASTI\SASTI.BusinessLayer\obj\Debug\SASTI.BusinessLayer.dll
+C:\Users\bilal\Downloads\SASTI\SASTI.BusinessLayer\obj\Debug\SASTI.BusinessLayer.pdb
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.BusinessLayer.dll
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.BusinessLayer.pdb
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.Common.dll
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.DataLayer.dll
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.Models.dll
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI.BusinessLayer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI.BusinessLayer\bin\Debug\EntityFramework.dll
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.Common.pdb
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.DataLayer.pdb
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.Models.pdb
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.Models.dll.config
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI.BusinessLayer\obj\Debug\SASTI.BusinessLayer.csprojAssemblyReference.cache
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI.BusinessLayer\obj\Debug\SASTI.BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI.BusinessLayer\obj\Debug\SASTI.BusinessLayer.csproj.CopyComplete
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI.BusinessLayer\obj\Debug\SASTI.BusinessLayer.dll
+C:\Users\bilal\projects\ApiProject\SASTI\SASTI.BusinessLayer\obj\Debug\SASTI.BusinessLayer.pdb
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.BusinessLayer.dll
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.BusinessLayer.pdb
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.Common.dll
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.DataLayer.dll
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.Models.dll
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI.BusinessLayer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI.BusinessLayer\bin\Debug\EntityFramework.dll
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.Common.pdb
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.DataLayer.pdb
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.Models.pdb
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.Models.dll.config
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI.BusinessLayer\obj\Debug\SASTI.BusinessLayer.csprojAssemblyReference.cache
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI.BusinessLayer\obj\Debug\SASTI.BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI.BusinessLayer\obj\Debug\SASTI.BusinessLayer.csproj.CopyComplete
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI.BusinessLayer\obj\Debug\SASTI.BusinessLayer.dll
+C:\Users\bilal\projects\sachigrocery_apis\SASTI\SASTI.BusinessLayer\obj\Debug\SASTI.BusinessLayer.pdb
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.BusinessLayer.dll
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.BusinessLayer.pdb
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.Common.dll
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.DataLayer.dll
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.Models.dll
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI.BusinessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI.BusinessLayer\bin\Debug\EntityFramework.dll
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.Common.pdb
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.DataLayer.pdb
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.Models.pdb
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.Models.dll.config
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI.BusinessLayer\obj\Debug\SASTI.BusinessLayer.csproj.AssemblyReference.cache
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI.BusinessLayer\obj\Debug\SASTI.BusinessLayer.csproj.CoreCompileInputs.cache
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI.BusinessLayer\obj\Debug\SASTI.BusinessLayer.csproj.CopyComplete
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI.BusinessLayer\obj\Debug\SASTI.BusinessLayer.dll
+D:\Remote\projects\sachigrocery_apis\SASTI\SASTI.BusinessLayer\obj\Debug\SASTI.BusinessLayer.pdb
+D:\sachigrocery_apis\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.BusinessLayer.dll
+D:\sachigrocery_apis\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.BusinessLayer.pdb
+D:\sachigrocery_apis\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.Common.dll
+D:\sachigrocery_apis\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.DataLayer.dll
+D:\sachigrocery_apis\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.Models.dll
+D:\sachigrocery_apis\SASTI\SASTI.BusinessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\sachigrocery_apis\SASTI\SASTI.BusinessLayer\bin\Debug\EntityFramework.dll
+D:\sachigrocery_apis\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.Common.pdb
+D:\sachigrocery_apis\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.DataLayer.pdb
+D:\sachigrocery_apis\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.Models.pdb
+D:\sachigrocery_apis\SASTI\SASTI.BusinessLayer\bin\Debug\SASTI.Models.dll.config
+D:\sachigrocery_apis\SASTI\SASTI.BusinessLayer\obj\Debug\SASTI.BusinessLayer.csproj.AssemblyReference.cache
+D:\sachigrocery_apis\SASTI\SASTI.BusinessLayer\obj\Debug\SASTI.BusinessLayer.csproj.CoreCompileInputs.cache
+D:\sachigrocery_apis\SASTI\SASTI.BusinessLayer\obj\Debug\SASTI.BusinessLayer.csproj.CopyComplete
+D:\sachigrocery_apis\SASTI\SASTI.BusinessLayer\obj\Debug\SASTI.BusinessLayer.dll
+D:\sachigrocery_apis\SASTI\SASTI.BusinessLayer\obj\Debug\SASTI.BusinessLayer.pdb
