@@ -5,6 +5,9 @@ using System.Web;
 using SASTI.DataAccess;
 using System.Data;
 using SASTI.Models;
+using SASTI.Models.Dto;
+using SASTI.BusinessLayer;
+
 namespace SASTI.DataCore
 {
     public class UserManager : DABase
@@ -151,7 +154,7 @@ WHERE uf.USER_ID = {0} AND uf.PRODUCT_ID = {1}  AND  uf.IS_ACTIVE = 1 AND B.bdef
                 throw;
             }
         }
-        public USER RegisterUser(USER user)
+        public USER RegisterUser(UserRegisterDto user)
         {
             try
             {
@@ -177,12 +180,53 @@ WHERE uf.USER_ID = {0} AND uf.PRODUCT_ID = {1}  AND  uf.IS_ACTIVE = 1 AND B.bdef
                 }
                 if (createFlag)
                 {
-                    user.CREATED_ON = DateTime.Now;
-                    //user.USER_TYPE = 4;
-                    user.IS_ACTIVE = true;
-                    gEnt.USERS.Add(user);
+                    USER u = new USER()
+                    {
+                        ADDRESS = user.ADDRESS,
+                        BRANCH_ID= user.BRANCH_ID,
+                        CITY= user.CITY,
+                        CREATED_BY= user.CREATED_BY,
+                        CREATED_ON= DateTime.Now,
+                        EMAIL= user.EMAIL,
+                        FaceBookId= user.FaceBookId,
+                        IMAGE_PATH= user.IMAGE_PATH,
+                        IPhoneId= user.IPhoneId,
+                        IsSocialLogin= user.IsSocialLogin,
+                        IS_ACTIVE=true,
+                        IS_AVAILABLE= user.IS_AVAILABLE,
+                        MOBILE_NO= user.MOBILE_NO,
+                        PASSWORD= user.PASSWORD,
+                        UPDATED_BY= user.UPDATED_BY,
+                        UPDATED_ON= user.UPDATED_ON,
+                        USERNAME= user.USERNAME,
+                        USER_TYPE= user.USER_TYPE,
+                        VEHICLE_DESCRIPTION= user.VEHICLE_DESCRIPTION,
+                        VEHICLE_NUMBER= user.VEHICLE_NUMBER
+                    };
+
+
+
+                    //user.CREATED_ON = DateTime.Now;
+                    ////user.USER_TYPE = 4;
+                    //user.IS_ACTIVE = true;
+                    gEnt.USERS.Add(u);
                     gEnt.SaveChanges();
-                    return user;//ExecuteDataSet(string.Format(QRY_GET_USER_BY_ID, user.USER_ID));
+
+                    var userObj = gEnt.USERS.FirstOrDefault(x => x.MOBILE_NO == user.MOBILE_NO);
+                    if (userObj != null)
+                    {
+                        UsersLogic usersLogic = new UsersLogic();
+                        UserRegisterDto userRegisterDto = new UserRegisterDto()
+                        {
+                            USER_ID = userObj.USER_ID,
+                            FCM_Token = user.FCM_Token,
+                            USER_DEVICE_ID = user.USER_DEVICE_ID
+                        };
+
+                        usersLogic.RegisterDeviceFCMToken(userRegisterDto);
+                    }
+
+                    return u;//ExecuteDataSet(string.Format(QRY_GET_USER_BY_ID, user.USER_ID));
                 }
                 return null;
 

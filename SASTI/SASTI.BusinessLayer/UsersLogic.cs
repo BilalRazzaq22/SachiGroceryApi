@@ -15,7 +15,7 @@ namespace SASTI.BusinessLayer
     public class UsersLogic : AbstractFactory
     {
 
-        public DataSetDto FacebookLogin(USER param)
+        public DataSetDto FacebookLogin(UserDto param)
         {
             DataSetDto dataSetDto = new DataSetDto();
             try
@@ -46,6 +46,23 @@ namespace SASTI.BusinessLayer
                 }).FirstOrDefault();
                 if (obj != null)
                 {
+                    var userDevice = _userDevices.Repository.FirstOrDefault(x => x.USER_ID == obj.USER_ID && x.DEVICE_ID == param.USER_DEVICE_ID);
+                    if (userDevice != null)
+                    {
+                        userDevice.FCM_TOKEN = param.FCM_Token;
+                        _userDevices.Repository.Update(userDevice);
+                    }
+                    else
+                    {
+                        USER_DEVICES userDevices = new USER_DEVICES()
+                        {
+                            USER_ID = obj.USER_ID,
+                            DEVICE_ID = param.USER_DEVICE_ID,
+                            FCM_TOKEN = param.FCM_Token
+                        };
+                        _userDevices.Repository.Add(userDevices);
+                    }
+
                     dataSetDto.Response.Code = (int)HttpStatusCode.OK;
                     dataSetDto.Response.Message = "Success";
                     dataSetDto.Response.Data = obj;
@@ -54,13 +71,37 @@ namespace SASTI.BusinessLayer
                 }
                 else
                 {
-                    param.CREATED_ON = DateTime.Now;
-                    param.UPDATED_ON = DateTime.Now;
-                    param.IS_ACTIVE = true;
-                    param.PASSWORD = "FACEBOOK";
-                    param.IsSocialLogin = true;
+                    USER u = new USER()
+                    {
+                        ADDRESS = param.ADDRESS,
+                        BRANCH_ID = param.BRANCH_ID,
+                        CITY = param.CITY,
+                        CREATED_BY = param.CREATED_BY,
+                        CREATED_ON = DateTime.Now,
+                        EMAIL = param.EMAIL,
+                        FaceBookId = param.FaceBookId,
+                        IMAGE_PATH = param.IMAGE_PATH,
+                        IPhoneId = param.IPhoneId,
+                        IsSocialLogin = true,
+                        IS_ACTIVE = true,
+                        IS_AVAILABLE = param.IS_AVAILABLE,
+                        MOBILE_NO = param.MOBILE_NO,
+                        PASSWORD = "FACEBOOK",
+                        UPDATED_BY = param.UPDATED_BY,
+                        UPDATED_ON = DateTime.Now,
+                        USERNAME = param.USERNAME,
+                        USER_TYPE = param.USER_TYPE_ID,
+                        VEHICLE_DESCRIPTION = param.VEHICLE_DESCRIPTION,
+                        VEHICLE_NUMBER = param.VEHICLE_NUMBER
+                    };
 
-                    _user.Repository.Add(param);
+                    //param.CREATED_ON = DateTime.Now;
+                    //param.UPDATED_ON = DateTime.Now;
+                    //param.IS_ACTIVE = true;
+                    //param.PASSWORD = "FACEBOOK";
+                    //param.IsSocialLogin = true;
+
+                    _user.Repository.Add(u);
 
                     obj = _user.Repository.GetAll(x => x.FaceBookId == param.FaceBookId && x.IS_ACTIVE == true && x.IsSocialLogin == true).Select(x => new
                     {
@@ -76,6 +117,15 @@ namespace SASTI.BusinessLayer
                         x.FaceBookId,
                         x.IPhoneId
                     }).FirstOrDefault();
+
+
+                    USER_DEVICES userDevices = new USER_DEVICES()
+                    {
+                        USER_ID = obj.USER_ID,
+                        DEVICE_ID = param.USER_DEVICE_ID,
+                        FCM_TOKEN = param.FCM_Token
+                    };
+                    _userDevices.Repository.Add(userDevices);
 
                     dataSetDto.Response.Code = (int)HttpStatusCode.OK;
                     dataSetDto.Response.Message = "Success";
@@ -266,6 +316,18 @@ namespace SASTI.BusinessLayer
                 _userDevices.Repository.Add(userDevices);
             }
         }
+
+        public void RegisterDeviceFCMToken(UserRegisterDto userRegisterDto)
+        {
+            USER_DEVICES userDevices = new USER_DEVICES()
+            {
+                USER_ID = userRegisterDto.USER_ID,
+                DEVICE_ID = userRegisterDto.USER_DEVICE_ID,
+                FCM_TOKEN = userRegisterDto.FCM_Token
+            };
+            _userDevices.Repository.Add(userDevices);
+        }
+
         //public AjaxResponse UpdateUser(InputUserModel param)
         //{
         //    try

@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\DELL\Downloads\macromodulewebteam-sachigrocery_apis-0f9ca11ed280\macromodulewebteam-sachigrocery_apis-0f9ca11ed280\SASTI\SASTI.Models\SASTI.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\DELL\Documents\SachiGroceryApi\SASTI\SASTI.Models\SASTI.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

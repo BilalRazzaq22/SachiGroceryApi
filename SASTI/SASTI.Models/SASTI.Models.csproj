@@ -63,6 +63,9 @@
     <Compile Include="BANNER.cs">
       <DependentUpon>SASTI.tt</DependentUpon>
     </Compile>
+    <Compile Include="BANNER_IMAGES.cs">
+      <DependentUpon>SASTI.tt</DependentUpon>
+    </Compile>
     <Compile Include="BARCODE.cs">
       <DependentUpon>SASTI.tt</DependentUpon>
     </Compile>
@@ -87,6 +90,9 @@
     <Compile Include="CATEGORy.cs">
       <DependentUpon>SASTI.tt</DependentUpon>
     </Compile>
+    <Compile Include="CompanyInfo.cs">
+      <DependentUpon>SASTI.tt</DependentUpon>
+    </Compile>
     <Compile Include="ContactU.cs">
       <DependentUpon>SASTI.tt</DependentUpon>
     </Compile>
@@ -99,10 +105,17 @@
     <Compile Include="Dto\ResponseDto.cs" />
     <Compile Include="Dto\SearchProductDto.cs" />
     <Compile Include="Dto\UserDto.cs" />
+    <Compile Include="Dto\UserRegisterDto.cs" />
     <Compile Include="GROUP.cs">
       <DependentUpon>SASTI.tt</DependentUpon>
     </Compile>
     <Compile Include="ITEMINFO.cs">
+      <DependentUpon>SASTI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ItemList.cs">
+      <DependentUpon>SASTI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MAINMENU.cs">
       <DependentUpon>SASTI.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\LoadHomeDataResponse.cs" />
@@ -110,6 +123,12 @@
     <Compile Include="Models\Response\ProductResponse.cs" />
     <Compile Include="Models\Response\RecommendedProductResponse.cs" />
     <Compile Include="Models\Response\SaveOrderResponse.cs" />
+    <Compile Include="OFFER_MANAGEMENT.cs">
+      <DependentUpon>SASTI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ONLINE_TRANSACTION.cs">
+      <DependentUpon>SASTI.tt</DependentUpon>
+    </Compile>
     <Compile Include="ORDER.cs">
       <DependentUpon>SASTI.tt</DependentUpon>
     </Compile>
@@ -152,6 +171,9 @@
     <Compile Include="PRODUCT_PACKINGS.cs">
       <DependentUpon>SASTI.tt</DependentUpon>
     </Compile>
+    <Compile Include="PRODUCT_REVIEWS.cs">
+      <DependentUpon>SASTI.tt</DependentUpon>
+    </Compile>
     <Compile Include="PRODUCT_TAGS.cs">
       <DependentUpon>SASTI.tt</DependentUpon>
     </Compile>
@@ -166,6 +188,9 @@
       <DependentUpon>SASTI.tt</DependentUpon>
     </Compile>
     <Compile Include="RECOMMENDED_PRODUCTS.cs">
+      <DependentUpon>SASTI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Report.cs">
       <DependentUpon>SASTI.tt</DependentUpon>
     </Compile>
     <Compile Include="RIDER_ORDER.cs">
@@ -192,6 +217,12 @@
     <Compile Include="SMS_TYPES.cs">
       <DependentUpon>SASTI.tt</DependentUpon>
     </Compile>
+    <Compile Include="SpGetAllBannersHome_Result.cs">
+      <DependentUpon>SASTI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SpGetAllBanners_Result.cs">
+      <DependentUpon>SASTI.tt</DependentUpon>
+    </Compile>
     <Compile Include="SpGetAllBlogs_Result.cs">
       <DependentUpon>SASTI.tt</DependentUpon>
     </Compile>
@@ -204,7 +235,16 @@
     <Compile Include="SpGetAllOrders_Result.cs">
       <DependentUpon>SASTI.tt</DependentUpon>
     </Compile>
+    <Compile Include="SpGetAllProductReviewsHome_Result.cs">
+      <DependentUpon>SASTI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SpGetAllProductReviews_Result.cs">
+      <DependentUpon>SASTI.tt</DependentUpon>
+    </Compile>
     <Compile Include="SpGetAllProducts_Result.cs">
+      <DependentUpon>SASTI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetAllRecommendedProducts_Result.cs">
       <DependentUpon>SASTI.tt</DependentUpon>
     </Compile>
     <Compile Include="SpGetBlogDetailByBlogTitleUrl_Result.cs">
@@ -222,7 +262,16 @@
     <Compile Include="SpGetProductImagesByProductId_Result.cs">
       <DependentUpon>SASTI.tt</DependentUpon>
     </Compile>
+    <Compile Include="SpGetProductReviewsByProductId_Result.cs">
+      <DependentUpon>SASTI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPGetSearchProducts_Result.cs">
+      <DependentUpon>SASTI.tt</DependentUpon>
+    </Compile>
     <Compile Include="SpGetUserProfileById_Result.cs">
+      <DependentUpon>SASTI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SpGetWishList_Result.cs">
       <DependentUpon>SASTI.tt</DependentUpon>
     </Compile>
     <Compile Include="sp_helpdiagramdefinition_Result.cs">
@@ -234,6 +283,9 @@
     <Compile Include="STOCK.cs">
       <DependentUpon>SASTI.tt</DependentUpon>
     </Compile>
+    <Compile Include="SUBMENU.cs">
+      <DependentUpon>SASTI.tt</DependentUpon>
+    </Compile>
     <Compile Include="SUB_CATEGORIES.cs">
       <DependentUpon>SASTI.tt</DependentUpon>
     </Compile>
@@ -241,6 +293,9 @@
       <DependentUpon>SASTI.tt</DependentUpon>
     </Compile>
     <Compile Include="TEMP_CUSTOMERS.cs">
+      <DependentUpon>SASTI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TERMINFO.cs">
       <DependentUpon>SASTI.tt</DependentUpon>
     </Compile>
     <Compile Include="TEST.cs">
@@ -265,6 +320,12 @@
       <DependentUpon>SASTI.tt</DependentUpon>
     </Compile>
     <Compile Include="VENDOR_BRANCHES.cs">
+      <DependentUpon>SASTI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WebsitePage.cs">
+      <DependentUpon>SASTI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WISHES_PRODUCT.cs">
       <DependentUpon>SASTI.tt</DependentUpon>
     </Compile>
   </ItemGroup>

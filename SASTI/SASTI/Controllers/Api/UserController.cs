@@ -437,7 +437,7 @@ namespace SASTI.Controllers.Api
         [HttpPost]
         [Route("api/RegisterUser")]
         // POST api/<controller>
-        public HttpResponseMessage RegisterUser(HttpRequestMessage request, USER u)
+        public HttpResponseMessage RegisterUser(HttpRequestMessage request, UserRegisterDto u)
         {
             DataSetDto dataSetDto = new DataSetDto();
             try
@@ -778,7 +778,7 @@ namespace SASTI.Controllers.Api
         }
         [HttpPost]
         [Route("api/FacebookLogin")]
-        public HttpResponseMessage FacebookLogin(HttpRequestMessage request, USER u)
+        public HttpResponseMessage FacebookLogin(HttpRequestMessage request, UserDto u)
         {
             DataSetDto dataSetDto = new DataSetDto();
             UsersLogic objlogic = new UsersLogic();
@@ -811,20 +811,20 @@ namespace SASTI.Controllers.Api
             DataSetDto dataSetDto = new DataSetDto();
             UsersLogic objlogic = new UsersLogic();
 
-            var result = objlogic.DeleteUser(u);
+            //var result = objlogic.DeleteUser(u);
 
-            if (result != null)
-            {
-                dataSetDto.Response.Code = (int)HttpStatusCode.OK;
-                dataSetDto.Response.Message = "User deleted sucessfully";
-                dataSetDto.Response.Data = result;
-            }
-            else
-            {
-                dataSetDto.Response.Code = (int)HttpStatusCode.BadRequest;
-                dataSetDto.Response.Message = "Unable to delete user";
-                dataSetDto.Response.Data = null;
-            }
+            //if (result != null)
+            //{
+            //    dataSetDto.Response.Code = (int)HttpStatusCode.OK;
+            //    dataSetDto.Response.Message = "User deleted sucessfully";
+            //    dataSetDto.Response.Data = result;
+            //}
+            //else
+            //{
+            //    dataSetDto.Response.Code = (int)HttpStatusCode.BadRequest;
+            //    dataSetDto.Response.Message = "Unable to delete user";
+            //    dataSetDto.Response.Data = null;
+            //}
             return request.CreateResponse(HttpStatusCode.OK, dataSetDto);
         }
 

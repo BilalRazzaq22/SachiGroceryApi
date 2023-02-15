@@ -29,16 +29,21 @@ namespace SASTI.Models
     
         public virtual DbSet<AD> ADS { get; set; }
         public virtual DbSet<AREA> AREAS { get; set; }
+        public virtual DbSet<BANNER_IMAGES> BANNER_IMAGES { get; set; }
+        public virtual DbSet<BANNER> BANNERS { get; set; }
         public virtual DbSet<BARCODESTest> BARCODESTests { get; set; }
         public virtual DbSet<Blog> Blogs { get; set; }
         public virtual DbSet<BRANCH> BRANCHES { get; set; }
         public virtual DbSet<BRAND> BRANDS { get; set; }
         public virtual DbSet<CART> CARTs { get; set; }
         public virtual DbSet<CATEGORy> CATEGORIES { get; set; }
+        public virtual DbSet<CompanyInfo> CompanyInfoes { get; set; }
         public virtual DbSet<ContactU> ContactUs { get; set; }
         public virtual DbSet<COUPON> COUPONS { get; set; }
         public virtual DbSet<GROUP> GROUPS { get; set; }
-        public virtual DbSet<ITEMINFO> ITEMINFOes { get; set; }
+        public virtual DbSet<MAINMENU> MAINMENUs { get; set; }
+        public virtual DbSet<OFFER_MANAGEMENT> OFFER_MANAGEMENT { get; set; }
+        public virtual DbSet<ONLINE_TRANSACTION> ONLINE_TRANSACTION { get; set; }
         public virtual DbSet<ORDER_PRODUCTS> ORDER_PRODUCTS { get; set; }
         public virtual DbSet<ORDER_STATUSES> ORDER_STATUSES { get; set; }
         public virtual DbSet<ORDER> ORDERS { get; set; }
@@ -51,30 +56,38 @@ namespace SASTI.Models
         public virtual DbSet<PRODUCT_IMAGES> PRODUCT_IMAGES { get; set; }
         public virtual DbSet<PRODUCT_LEVELS> PRODUCT_LEVELS { get; set; }
         public virtual DbSet<PRODUCT_PACKINGS> PRODUCT_PACKINGS { get; set; }
+        public virtual DbSet<PRODUCT_REVIEWS> PRODUCT_REVIEWS { get; set; }
         public virtual DbSet<PRODUCT_TAGS> PRODUCT_TAGS { get; set; }
         public virtual DbSet<PRODUCT_TYPES> PRODUCT_TYPES { get; set; }
         public virtual DbSet<PRODUCT> PRODUCTS { get; set; }
         public virtual DbSet<ProductTest> ProductTests { get; set; }
-        public virtual DbSet<PS000> PS000 { get; set; }
+        public virtual DbSet<RECOMMENDED_PRODUCTS> RECOMMENDED_PRODUCTS { get; set; }
         public virtual DbSet<RIDER_ORDER> RIDER_ORDER { get; set; }
         public virtual DbSet<SM> SMS { get; set; }
         public virtual DbSet<SMS_TYPES> SMS_TYPES { get; set; }
-        public virtual DbSet<STOCK> STOCKs { get; set; }
         public virtual DbSet<SUB_CATEGORIES> SUB_CATEGORIES { get; set; }
+        public virtual DbSet<SUBMENU> SUBMENUs { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TEMP_CUSTOMERS> TEMP_CUSTOMERS { get; set; }
         public virtual DbSet<USER_ADDRESSES> USER_ADDRESSES { get; set; }
+        public virtual DbSet<USER_DEVICES> USER_DEVICES { get; set; }
+        public virtual DbSet<USER_FAVOURITES> USER_FAVOURITES { get; set; }
         public virtual DbSet<USER_TYPES> USER_TYPES { get; set; }
         public virtual DbSet<USER> USERS { get; set; }
         public virtual DbSet<VENDOR_BRANCHES> VENDOR_BRANCHES { get; set; }
         public virtual DbSet<VENDOR> VENDORS { get; set; }
+        public virtual DbSet<WebsitePage> WebsitePages { get; set; }
+        public virtual DbSet<WISHES_PRODUCT> WISHES_PRODUCT { get; set; }
         public virtual DbSet<BarcodeNewTest> BarcodeNewTests { get; set; }
         public virtual DbSet<BARCODE> BARCODES { get; set; }
+        public virtual DbSet<ITEMINFO> ITEMINFOes { get; set; }
+        public virtual DbSet<PS000> PS000 { get; set; }
         public virtual DbSet<PS000Test> PS000Test { get; set; }
+        public virtual DbSet<STOCK> STOCKs { get; set; }
+        public virtual DbSet<TERMINFO> TERMINFOes { get; set; }
         public virtual DbSet<TEST> TESTs { get; set; }
-        public virtual DbSet<BANNER> BANNERS { get; set; }
-        public virtual DbSet<RECOMMENDED_PRODUCTS> RECOMMENDED_PRODUCTS { get; set; }
-        public virtual DbSet<USER_FAVOURITES> USER_FAVOURITES { get; set; }
+        public virtual DbSet<ItemList> ItemLists { get; set; }
+        public virtual DbSet<Report> Reports { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {
@@ -214,7 +227,7 @@ namespace SASTI.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_upgraddiagrams");
         }
     
-        public virtual int SpGetAllBanners(Nullable<int> pageIndex, Nullable<int> pageSize, string sortColumn, string sortOrder, string searchText)
+        public virtual ObjectResult<SpGetAllBanners_Result> SpGetAllBanners(Nullable<int> pageIndex, Nullable<int> pageSize, string sortColumn, string sortOrder, string searchText)
         {
             var pageIndexParameter = pageIndex.HasValue ?
                 new ObjectParameter("PageIndex", pageIndex) :
@@ -236,16 +249,16 @@ namespace SASTI.Models
                 new ObjectParameter("SearchText", searchText) :
                 new ObjectParameter("SearchText", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SpGetAllBanners", pageIndexParameter, pageSizeParameter, sortColumnParameter, sortOrderParameter, searchTextParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SpGetAllBanners_Result>("SpGetAllBanners", pageIndexParameter, pageSizeParameter, sortColumnParameter, sortOrderParameter, searchTextParameter);
         }
     
-        public virtual int SpGetAllBannersHome(Nullable<int> pageIndex)
+        public virtual ObjectResult<SpGetAllBannersHome_Result> SpGetAllBannersHome(Nullable<int> pageIndex)
         {
             var pageIndexParameter = pageIndex.HasValue ?
                 new ObjectParameter("PageIndex", pageIndex) :
                 new ObjectParameter("PageIndex", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SpGetAllBannersHome", pageIndexParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SpGetAllBannersHome_Result>("SpGetAllBannersHome", pageIndexParameter);
         }
     
         public virtual ObjectResult<SpGetAllBlogs_Result> SpGetAllBlogs(Nullable<int> pageIndex, Nullable<int> pageSize, string sortColumn, string sortOrder, string searchText)
@@ -372,7 +385,7 @@ namespace SASTI.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SpGetAllOrdersByCustomerId_Result>("SpGetAllOrdersByCustomerId", pageIndexParameter, pageSizeParameter, sortColumnParameter, sortOrderParameter, searchTextParameter, oStIDParameter, customerIdParameter);
         }
     
-        public virtual int SpGetAllProductReviews(Nullable<int> pageIndex, Nullable<int> pageSize, string sortColumn, string sortOrder, string searchText)
+        public virtual ObjectResult<SpGetAllProductReviews_Result> SpGetAllProductReviews(Nullable<int> pageIndex, Nullable<int> pageSize, string sortColumn, string sortOrder, string searchText)
         {
             var pageIndexParameter = pageIndex.HasValue ?
                 new ObjectParameter("PageIndex", pageIndex) :
@@ -394,19 +407,19 @@ namespace SASTI.Models
                 new ObjectParameter("SearchText", searchText) :
                 new ObjectParameter("SearchText", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SpGetAllProductReviews", pageIndexParameter, pageSizeParameter, sortColumnParameter, sortOrderParameter, searchTextParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SpGetAllProductReviews_Result>("SpGetAllProductReviews", pageIndexParameter, pageSizeParameter, sortColumnParameter, sortOrderParameter, searchTextParameter);
         }
     
-        public virtual int SpGetAllProductReviewsHome(Nullable<int> pageIndex)
+        public virtual ObjectResult<SpGetAllProductReviewsHome_Result> SpGetAllProductReviewsHome(Nullable<int> pageIndex)
         {
             var pageIndexParameter = pageIndex.HasValue ?
                 new ObjectParameter("PageIndex", pageIndex) :
                 new ObjectParameter("PageIndex", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SpGetAllProductReviewsHome", pageIndexParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SpGetAllProductReviewsHome_Result>("SpGetAllProductReviewsHome", pageIndexParameter);
         }
     
-        public virtual ObjectResult<SpGetAllProducts_Result> SpGetAllProducts(Nullable<int> pageIndex, Nullable<int> pageSize, string sortColumn, string sortOrder, string searchText, string categoryId, string subCategoryId, string groupId)
+        public virtual ObjectResult<SpGetAllProducts_Result> SpGetAllProducts(Nullable<int> pageIndex, Nullable<int> pageSize, string sortColumn, string sortOrder, string searchText, string categoryId, string subCategoryId, string groupId, Nullable<int> branchId)
         {
             var pageIndexParameter = pageIndex.HasValue ?
                 new ObjectParameter("PageIndex", pageIndex) :
@@ -440,10 +453,14 @@ namespace SASTI.Models
                 new ObjectParameter("GroupId", groupId) :
                 new ObjectParameter("GroupId", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SpGetAllProducts_Result>("SpGetAllProducts", pageIndexParameter, pageSizeParameter, sortColumnParameter, sortOrderParameter, searchTextParameter, categoryIdParameter, subCategoryIdParameter, groupIdParameter);
+            var branchIdParameter = branchId.HasValue ?
+                new ObjectParameter("BranchId", branchId) :
+                new ObjectParameter("BranchId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SpGetAllProducts_Result>("SpGetAllProducts", pageIndexParameter, pageSizeParameter, sortColumnParameter, sortOrderParameter, searchTextParameter, categoryIdParameter, subCategoryIdParameter, groupIdParameter, branchIdParameter);
         }
     
-        public virtual int SPGetAllRecommendedProducts(Nullable<int> pageIndex, Nullable<int> pageSize)
+        public virtual ObjectResult<SPGetAllRecommendedProducts_Result> SPGetAllRecommendedProducts(Nullable<int> pageIndex, Nullable<int> pageSize)
         {
             var pageIndexParameter = pageIndex.HasValue ?
                 new ObjectParameter("PageIndex", pageIndex) :
@@ -453,7 +470,7 @@ namespace SASTI.Models
                 new ObjectParameter("PageSize", pageSize) :
                 new ObjectParameter("PageSize", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SPGetAllRecommendedProducts", pageIndexParameter, pageSizeParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SPGetAllRecommendedProducts_Result>("SPGetAllRecommendedProducts", pageIndexParameter, pageSizeParameter);
         }
     
         public virtual ObjectResult<SpGetBlogDetailByBlogTitleUrl_Result> SpGetBlogDetailByBlogTitleUrl(string blogTitleUrl)
@@ -474,22 +491,30 @@ namespace SASTI.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SpGetHomeBlogs_Result>("SpGetHomeBlogs", pageIndexParameter);
         }
     
-        public virtual ObjectResult<SpGetHomeProducts_Result> SpGetHomeProducts(Nullable<int> categoryId)
+        public virtual ObjectResult<SpGetHomeProducts_Result> SpGetHomeProducts(Nullable<int> categoryId, Nullable<int> branchId)
         {
             var categoryIdParameter = categoryId.HasValue ?
                 new ObjectParameter("CategoryId", categoryId) :
                 new ObjectParameter("CategoryId", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SpGetHomeProducts_Result>("SpGetHomeProducts", categoryIdParameter);
+            var branchIdParameter = branchId.HasValue ?
+                new ObjectParameter("BranchId", branchId) :
+                new ObjectParameter("BranchId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SpGetHomeProducts_Result>("SpGetHomeProducts", categoryIdParameter, branchIdParameter);
         }
     
-        public virtual ObjectResult<SpGetProductDetailByProductNameUrl_Result> SpGetProductDetailByProductNameUrl(string productNameUrl)
+        public virtual ObjectResult<SpGetProductDetailByProductNameUrl_Result> SpGetProductDetailByProductNameUrl(string productNameUrl, Nullable<int> branchId)
         {
             var productNameUrlParameter = productNameUrl != null ?
                 new ObjectParameter("ProductNameUrl", productNameUrl) :
                 new ObjectParameter("ProductNameUrl", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SpGetProductDetailByProductNameUrl_Result>("SpGetProductDetailByProductNameUrl", productNameUrlParameter);
+            var branchIdParameter = branchId.HasValue ?
+                new ObjectParameter("BranchId", branchId) :
+                new ObjectParameter("BranchId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SpGetProductDetailByProductNameUrl_Result>("SpGetProductDetailByProductNameUrl", productNameUrlParameter, branchIdParameter);
         }
     
         public virtual ObjectResult<SpGetProductImagesByProductId_Result> SpGetProductImagesByProductId(Nullable<int> productId)
@@ -501,7 +526,7 @@ namespace SASTI.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SpGetProductImagesByProductId_Result>("SpGetProductImagesByProductId", productIdParameter);
         }
     
-        public virtual int SpGetProductReviewsByProductId(Nullable<long> pRODUCT_ID, Nullable<int> pageIndex, Nullable<int> pageSize, string sortColumn, string sortOrder, string searchText)
+        public virtual ObjectResult<SpGetProductReviewsByProductId_Result> SpGetProductReviewsByProductId(Nullable<long> pRODUCT_ID, Nullable<int> pageIndex, Nullable<int> pageSize, string sortColumn, string sortOrder, string searchText)
         {
             var pRODUCT_IDParameter = pRODUCT_ID.HasValue ?
                 new ObjectParameter("PRODUCT_ID", pRODUCT_ID) :
@@ -527,7 +552,16 @@ namespace SASTI.Models
                 new ObjectParameter("SearchText", searchText) :
                 new ObjectParameter("SearchText", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SpGetProductReviewsByProductId", pRODUCT_IDParameter, pageIndexParameter, pageSizeParameter, sortColumnParameter, sortOrderParameter, searchTextParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SpGetProductReviewsByProductId_Result>("SpGetProductReviewsByProductId", pRODUCT_IDParameter, pageIndexParameter, pageSizeParameter, sortColumnParameter, sortOrderParameter, searchTextParameter);
+        }
+    
+        public virtual ObjectResult<SPGetSearchProducts_Result> SPGetSearchProducts(string productName)
+        {
+            var productNameParameter = productName != null ?
+                new ObjectParameter("ProductName", productName) :
+                new ObjectParameter("ProductName", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SPGetSearchProducts_Result>("SPGetSearchProducts", productNameParameter);
         }
     
         public virtual ObjectResult<SpGetUserProfileById_Result> SpGetUserProfileById(Nullable<int> userId)
@@ -539,7 +573,7 @@ namespace SASTI.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SpGetUserProfileById_Result>("SpGetUserProfileById", userIdParameter);
         }
     
-        public virtual int SpGetWishList(Nullable<int> pageIndex, Nullable<int> pageSize, string sortColumn, string sortOrder, string searchText, Nullable<int> uSER_ID)
+        public virtual ObjectResult<SpGetWishList_Result> SpGetWishList(Nullable<int> pageIndex, Nullable<int> pageSize, string sortColumn, string sortOrder, string searchText, Nullable<int> uSER_ID)
         {
             var pageIndexParameter = pageIndex.HasValue ?
                 new ObjectParameter("PageIndex", pageIndex) :
@@ -565,7 +599,7 @@ namespace SASTI.Models
                 new ObjectParameter("USER_ID", uSER_ID) :
                 new ObjectParameter("USER_ID", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SpGetWishList", pageIndexParameter, pageSizeParameter, sortColumnParameter, sortOrderParameter, searchTextParameter, uSER_IDParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SpGetWishList_Result>("SpGetWishList", pageIndexParameter, pageSizeParameter, sortColumnParameter, sortOrderParameter, searchTextParameter, uSER_IDParameter);
         }
     }
 }

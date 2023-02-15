@@ -11,27 +11,18 @@ namespace SASTI.Models
 {
     using System;
     
-    public partial class SpGetAllProducts_Result
+    public partial class SpGetWishList_Result
     {
-        public int PRODUCT_ID { get; set; }
-        public string NAME { get; set; }
-        public string DESCRIPTION { get; set; }
-        public Nullable<decimal> PRICE1 { get; set; }
+        public int WISH_ID { get; set; }
+        public Nullable<int> USER_ID { get; set; }
+        public Nullable<int> PRODUCT_ID { get; set; }
+        public string PRODUCT_NAME { get; set; }
+        public string PRODUCT_DESCRIPTION { get; set; }
         public Nullable<decimal> PRICE { get; set; }
         public Nullable<int> PRICE2 { get; set; }
-        public string COLOR { get; set; }
-        public string BRAND { get; set; }
-        public string FLAVOR { get; set; }
-        public string PACKING { get; set; }
-        public string TAG { get; set; }
-        public Nullable<System.DateTime> CREATED_DATE { get; set; }
-        public string PRODUCT_NAME_URL { get; set; }
-        public string CategoryName { get; set; }
         public string IMAGE_THUMBNAIL_PATH { get; set; }
-        public Nullable<int> GroupID { get; set; }
-        public Nullable<int> VENDOR_ID { get; set; }
-        public Nullable<int> CATEGORY_ID { get; set; }
-        public Nullable<int> SUB_CATEGORY_ID { get; set; }
+        public string PRODUCT_NAME_URL { get; set; }
+        public Nullable<System.DateTime> CREATED_DATE { get; set; }
         public Nullable<long> RowIndex { get; set; }
         public Nullable<int> TotalRecords { get; set; }
         public Nullable<decimal> TotalPages { get; set; }

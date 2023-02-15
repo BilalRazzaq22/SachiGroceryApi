@@ -206,7 +206,7 @@ namespace SASTI.Controllers
         {
             return new UserManager().RegisterCustomer(u);
         }
-        public USER RegisterUser(USER u)
+        public USER RegisterUser(UserRegisterDto u)
         {
             return new UserManager().RegisterUser(u);
         }
