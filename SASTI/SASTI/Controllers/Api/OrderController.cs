@@ -240,7 +240,7 @@ namespace SASTI.Controllers
 
         [HttpGet]
         [Route("api/getCustomerOrderProducts")]
-        public HttpResponseMessage getCustomerOrderProducts(HttpRequestMessage request,int orderId)
+        public HttpResponseMessage getCustomerOrderProducts(HttpRequestMessage request, int orderId)
         {
 
             DataSetDto dataSetDto = controller.getCustomerProductsByOrderId(orderId);
@@ -320,9 +320,19 @@ namespace SASTI.Controllers
         public ApiResponse updateOrderStatus(UserOrders o)
         {
             DataSet ds = controller.getOrdersByOrderId(o.ORDER_ID);
-            DataSet customer_fcm_token = controller.getUserFCMToken(ds.Tables[0].Rows[0]["CUSTOMER_ID"].ToString());
-            DataSet managers_fcm_token = controller.managerFCMToken(ds.Tables[0].Rows[0]["BRANCH_ID"].ToString());
-            string user_mobile = controller.getUserMobile(ds.Tables[0].Rows[0]["CUSTOMER_ID"].ToString());
+            string customerId = ds.Tables[0].Rows[0]["CUSTOMER_ID"].ToString();
+            string branchId = ds.Tables[0].Rows[0]["BRANCH_ID"].ToString();
+            string mobileNo = ds.Tables[0].Rows[0]["MOBILE"].ToString();
+
+            DataSet customer_fcm_token = (!string.IsNullOrEmpty(customerId)) ? controller.getUserFCMToken(customerId) : null;
+            DataSet managers_fcm_token = (!string.IsNullOrEmpty(branchId)) ? controller.managerFCMToken(branchId) : null;
+            string user_mobile = controller.getUserMobile(customerId);
+
+            if (string.IsNullOrEmpty(user_mobile))
+            {
+                user_mobile = mobileNo;
+            }
+
             SMSManager smsmanager = new SMSManager();
 
             int result = controller.updateOrderStatus(o.ORDER_ID, o.STATUS, o.USER_ID);
@@ -332,29 +342,33 @@ namespace SASTI.Controllers
                 if (o.STATUS == ApplicationConstants.PENDING_ORDER_STATUS)
                 {
                     //customer ko
-                    smsmanager.GenerateSMSAlert(user_mobile, "Your Chaarsu Order " + o.ORDER_ID + " is processing. Download App http://bit.ly/ChaarsuDelivery");
+                    if (!string.IsNullOrEmpty(user_mobile))
+                        smsmanager.GenerateSMSAlert(user_mobile, "Your Chaarsu Order " + o.ORDER_ID + " is processing. Download App http://bit.ly/ChaarsuDelivery");
 
                     FCMPushNotification notification = new FCMPushNotification();
-                    foreach (DataRow r in customer_fcm_token.Tables[0].Rows)
+                    if (customer_fcm_token != null)
                     {
-                        notification.SendNotification("Chaarsu", "Your order is in process!!! ", "news", "477625648329", r["FCM_TOKEN"].ToString());
+                        foreach (DataRow r in customer_fcm_token.Tables[0].Rows)
+                        {
+                            notification.SendNotification("Chaarsu", "Your order is in process!!! ", "news", "477625648329", r["FCM_TOKEN"].ToString());
+                        }
                     }
                     //notification.SendNotification("Chaarsu", "Your order is in process!!! ", "news", "477625648329", customer_fcm_token);
 
-
-                    foreach (DataRow r in managers_fcm_token.Tables[0].Rows)
+                    if (managers_fcm_token != null)
                     {
-                        notification.SendNotification("Chaarsu", "Order is in Process!!! ", "news", "477625648329", r["FCM_TOKEN"].ToString());
+                        foreach (DataRow r in managers_fcm_token.Tables[0].Rows)
+                        {
+                            notification.SendNotification("Chaarsu", "Order is in Process!!! ", "news", "477625648329", r["FCM_TOKEN"].ToString());
+                        }
                     }
 
                 }
                 else if (o.STATUS == ApplicationConstants.ASSIGNED_TO_FLOORMAN_ORDER_STATUS)
                 {
                     //customer, maanger
-
-                    smsmanager.GenerateSMSAlert(user_mobile, "Your Chaarsu order is dispatched!");
-
-
+                    if (!string.IsNullOrEmpty(user_mobile))
+                        smsmanager.GenerateSMSAlert(user_mobile, "Your Chaarsu order is dispatched!");
 
                     FCMPushNotification notification = new FCMPushNotification();
                     foreach (DataRow r in customer_fcm_token.Tables[0].Rows)
@@ -362,9 +376,6 @@ namespace SASTI.Controllers
                         notification.SendNotification("Chaarsu", "Your order is dispatched. Humaray paisay tyaar rakhien!", "news", "477625648329", r["FCM_TOKEN"].ToString());
                     }
                     //notification.SendNotification("Chaarsu", "Your order is dispatched. Humaray paisay tyaar rakhien!", "news", "477625648329", customer_fcm_token);
-
-
-
 
                     foreach (DataRow r in managers_fcm_token.Tables[0].Rows)
                     {
@@ -499,7 +510,7 @@ namespace SASTI.Controllers
 
         [HttpGet]
         [Route("api/updateDiscount")]
-        public HttpResponseMessage updateDiscount(HttpRequestMessage request,int disc, int user_id, int orderID)
+        public HttpResponseMessage updateDiscount(HttpRequestMessage request, int disc, int user_id, int orderID)
         {
             DataSetDto dataSetDto = new DataSetDto();
             try
@@ -507,7 +518,7 @@ namespace SASTI.Controllers
 
                 object totalOrderAmount = controller.GetOrderTotalAmount(orderID);
 
-                if(disc > Convert.ToInt32(totalOrderAmount))
+                if (disc > Convert.ToInt32(totalOrderAmount))
                 {
                     dataSetDto.Response.Code = (int)HttpStatusCode.BadRequest;
                     dataSetDto.Response.Message = $"Your total order amount is {totalOrderAmount} and your discount amount {disc} is greater than {totalOrderAmount}";
@@ -535,7 +546,7 @@ namespace SASTI.Controllers
             {
 
                 dataSetDto.Response.Code = (int)HttpStatusCode.BadRequest;
-                dataSetDto.Response.Message ="Not Found";
+                dataSetDto.Response.Message = "Not Found";
                 dataSetDto.Response.Data = ex.Message;
                 return request.CreateResponse(HttpStatusCode.BadRequest, dataSetDto);
             }

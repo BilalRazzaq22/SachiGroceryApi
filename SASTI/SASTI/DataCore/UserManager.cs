@@ -115,7 +115,7 @@ WHERE uf.USER_ID = {0} AND uf.PRODUCT_ID = {1}  AND  uf.IS_ACTIVE = 1 AND B.bdef
                 {
                     return gEnt.USERS.FirstOrDefault(x => x.USERNAME == username && x.PASSWORD == password && x.IS_ACTIVE == true);
                 }
-                
+
                 //return ExecuteDataSet(string.Format(QRY_AUTHENTICATE_USER, username, password));
             }
             catch (Exception)
@@ -183,25 +183,25 @@ WHERE uf.USER_ID = {0} AND uf.PRODUCT_ID = {1}  AND  uf.IS_ACTIVE = 1 AND B.bdef
                     USER u = new USER()
                     {
                         ADDRESS = user.ADDRESS,
-                        BRANCH_ID= user.BRANCH_ID,
-                        CITY= user.CITY,
-                        CREATED_BY= user.CREATED_BY,
-                        CREATED_ON= DateTime.Now,
-                        EMAIL= user.EMAIL,
-                        FaceBookId= user.FaceBookId,
-                        IMAGE_PATH= user.IMAGE_PATH,
-                        IPhoneId= user.IPhoneId,
-                        IsSocialLogin= user.IsSocialLogin,
-                        IS_ACTIVE=true,
-                        IS_AVAILABLE= user.IS_AVAILABLE,
-                        MOBILE_NO= user.MOBILE_NO,
-                        PASSWORD= user.PASSWORD,
-                        UPDATED_BY= user.UPDATED_BY,
-                        UPDATED_ON= user.UPDATED_ON,
-                        USERNAME= user.USERNAME,
-                        USER_TYPE= user.USER_TYPE,
-                        VEHICLE_DESCRIPTION= user.VEHICLE_DESCRIPTION,
-                        VEHICLE_NUMBER= user.VEHICLE_NUMBER
+                        BRANCH_ID = user.BRANCH_ID,
+                        CITY = user.CITY,
+                        CREATED_BY = user.CREATED_BY,
+                        CREATED_ON = DateTime.Now,
+                        EMAIL = user.EMAIL,
+                        FaceBookId = user.FaceBookId,
+                        IMAGE_PATH = user.IMAGE_PATH,
+                        IPhoneId = user.IPhoneId,
+                        IsSocialLogin = user.IsSocialLogin,
+                        IS_ACTIVE = true,
+                        IS_AVAILABLE = user.IS_AVAILABLE,
+                        MOBILE_NO = user.MOBILE_NO,
+                        PASSWORD = user.PASSWORD,
+                        UPDATED_BY = user.UPDATED_BY,
+                        UPDATED_ON = user.UPDATED_ON,
+                        USERNAME = user.USERNAME,
+                        USER_TYPE = user.USER_TYPE,
+                        VEHICLE_DESCRIPTION = user.VEHICLE_DESCRIPTION,
+                        VEHICLE_NUMBER = user.VEHICLE_NUMBER
                     };
 
 
@@ -278,11 +278,13 @@ WHERE uf.USER_ID = {0} AND uf.PRODUCT_ID = {1}  AND  uf.IS_ACTIVE = 1 AND B.bdef
         }
         public string getUserMobile(string userId)
         {
-            object mobile = ExecuteScalar(string.Format("select MOBILE_NO from USERS where USER_ID = {0}", userId));
-            if (mobile != null)
-                return mobile.ToString();
-            else
-                return "000000000000";
+            if (!string.IsNullOrEmpty(userId))
+            {
+                object mobile = ExecuteScalar(string.Format("select MOBILE_NO from USERS where USER_ID = {0}", userId));
+                if (mobile != null)
+                    return mobile.ToString();
+            }
+            return "000000000000";
         }
         public DataSet authenticateWebUser(string username, string password)
         {

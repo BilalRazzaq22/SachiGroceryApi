@@ -76,7 +76,7 @@ namespace SASTI.BusinessLayer
 
                 res.HotProducts = query;
                 res.Groups = _group.Repository.GetAll();
-                res.Banners = _banner.Repository.GetAll();
+                res.Banners = _banner.Repository.GetAll().Where(x => x.IsActive == true && x.BannerType == "Mobile").ToList();
 
                 dataSetDto.Response.Code = (int)HttpStatusCode.OK;
                 dataSetDto.Response.Message = "Success";

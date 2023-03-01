@@ -74,7 +74,7 @@ namespace SASTI.BusinessLayer
                                  }).FirstOrDefault();
                     res.CustomerProducts.Add(query);
                     res.Groups = _group.Repository.GetAll();
-                    res.Banners = _banner.Repository.GetAll();
+                    res.Banners = _banner.Repository.GetAll().Where(x => x.IsActive == true && x.BannerType == "Mobile").ToList();
                 }
 
 
