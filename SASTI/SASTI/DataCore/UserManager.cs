@@ -278,7 +278,7 @@ WHERE uf.USER_ID = {0} AND uf.PRODUCT_ID = {1}  AND  uf.IS_ACTIVE = 1 AND B.bdef
         }
         public string getUserMobile(string userId)
         {
-            if (!string.IsNullOrEmpty(userId))
+            if (!string.IsNullOrEmpty(userId) && userId != "0")
             {
                 object mobile = ExecuteScalar(string.Format("select MOBILE_NO from USERS where USER_ID = {0}", userId));
                 if (mobile != null)

@@ -324,7 +324,7 @@ namespace SASTI.Controllers
             string branchId = ds.Tables[0].Rows[0]["BRANCH_ID"].ToString();
             string mobileNo = ds.Tables[0].Rows[0]["MOBILE"].ToString();
 
-            DataSet customer_fcm_token = (!string.IsNullOrEmpty(customerId)) ? controller.getUserFCMToken(customerId) : null;
+            DataSet customer_fcm_token = (!string.IsNullOrEmpty(customerId) && customerId != "0") ? controller.getUserFCMToken(customerId) : null;
             DataSet managers_fcm_token = (!string.IsNullOrEmpty(branchId)) ? controller.managerFCMToken(branchId) : null;
             string user_mobile = controller.getUserMobile(customerId);
 
@@ -362,7 +362,6 @@ namespace SASTI.Controllers
                             notification.SendNotification("Chaarsu", "Order is in Process!!! ", "news", "477625648329", r["FCM_TOKEN"].ToString());
                         }
                     }
-
                 }
                 else if (o.STATUS == ApplicationConstants.ASSIGNED_TO_FLOORMAN_ORDER_STATUS)
                 {

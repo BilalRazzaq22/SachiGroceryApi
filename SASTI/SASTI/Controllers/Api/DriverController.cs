@@ -24,35 +24,47 @@ namespace SASTI.Controllers
         public ApiResponse markDelivered(ORDER o)
         {
             DataSet ds = controller.getOrdersByOrderId(o.ORDER_ID);
-            DataSet customer_fcm_token = controller.getUserFCMToken(ds.Tables[0].Rows[0]["CUSTOMER_ID"].ToString());
-            DataSet managers_fcm_token = controller.managerFCMToken(ds.Tables[0].Rows[0]["BRANCH_ID"].ToString());
-            DataSet rider_fcm_token = controller.getUserFCMToken(ds.Tables[0].Rows[0]["RIDER_ID"].ToString());
-            string user_mobile = controller.getUserMobile(ds.Tables[0].Rows[0]["CUSTOMER_ID"].ToString());
+
+            string customerId = ds.Tables[0].Rows[0]["CUSTOMER_ID"].ToString();
+            string branchId = ds.Tables[0].Rows[0]["BRANCH_ID"].ToString();
+            string riderId = ds.Tables[0].Rows[0]["RIDER_ID"].ToString();
+
+            DataSet customer_fcm_token = (!string.IsNullOrEmpty(customerId) && customerId != "0") ? controller.getUserFCMToken(customerId) : null;
+            DataSet managers_fcm_token = (!string.IsNullOrEmpty(branchId)) ? controller.managerFCMToken(branchId) : null;
+            DataSet rider_fcm_token = (!string.IsNullOrEmpty(riderId)) ? controller.getUserFCMToken(riderId) : null;
+            string user_mobile = controller.getUserMobile(customerId);
             SMSManager smsmanager = new SMSManager();
             int result = controller.markDelivered(o.ORDER_ID);
             if (result > 0)
             {
                 FCMPushNotification notification = new FCMPushNotification();
 
-                foreach (DataRow r in customer_fcm_token.Tables[0].Rows)
+                if (customer_fcm_token != null)
                 {
-                    notification.SendNotification("Chaarsu", "Your order " + o.ORDER_ID + " is Delivered!!! ", "news", "477625648329", r["FCM_TOKEN"].ToString());
+                    foreach (DataRow r in customer_fcm_token.Tables[0].Rows)
+                    {
+                        notification.SendNotification("Chaarsu", "Your order " + o.ORDER_ID + " is Delivered!!! ", "news", "477625648329", r["FCM_TOKEN"].ToString());
+                    }
                 }
 
-                foreach (DataRow r in rider_fcm_token.Tables[0].Rows)
+                if (rider_fcm_token != null)
                 {
-                    notification.SendNotification("Chaarsu", "Order " + o.ORDER_ID + " is Delivered!!! ", "news", "477625648329", r["FCM_TOKEN"].ToString());
+                    foreach (DataRow r in rider_fcm_token.Tables[0].Rows)
+                    {
+                        notification.SendNotification("Chaarsu", "Order " + o.ORDER_ID + " is Delivered!!! ", "news", "477625648329", r["FCM_TOKEN"].ToString());
+                    }
                 }
                 //notification.SendNotification("Chaarsu", "Your order " + o.ORDER_ID + " is Delivered!!! ", "news", "477625648329", customer_fcm_token);
                 //notification.SendNotification("Chaarsu", "Order " + o.ORDER_ID + " is Delivered!!! ", "news", "477625648329", rider_fcm_token);
                 smsmanager.GenerateSMSAlert(user_mobile, "Your Chaarsu order is delivered. It has been our absolute pleasure to serve you today!");
 
-
-                foreach (DataRow r in managers_fcm_token.Tables[0].Rows)
+                if (managers_fcm_token != null)
                 {
-                    notification.SendNotification("Chaarsu", "Order " + o.ORDER_ID + " is Delivered!!! ", "news", "477625648329", r["FCM_TOKEN"].ToString());
+                    foreach (DataRow r in managers_fcm_token.Tables[0].Rows)
+                    {
+                        notification.SendNotification("Chaarsu", "Order " + o.ORDER_ID + " is Delivered!!! ", "news", "477625648329", r["FCM_TOKEN"].ToString());
+                    }
                 }
-
 
                 return JsonResponse.GetResponse(Enums.ResponseCode.Success, true);
             }
