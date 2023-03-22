@@ -216,7 +216,7 @@ namespace SASTI.BusinessLayer
             }
         }
 
-        public DataSetDto UpdateUserProfile(USER param)
+        public DataSetDto UpdateUserProfile(UserProfileDto param)
         {
             DataSetDto dataSetDto = new DataSetDto();
             try
@@ -225,11 +225,22 @@ namespace SASTI.BusinessLayer
 
                 if (userObj != null)
                 {
+                    if (!string.IsNullOrEmpty(param.OLDPASSWORD))
+                    {
+                        if(param.OLDPASSWORD != userObj.PASSWORD)
+                        {
+                            dataSetDto.Response.Code = (int)HttpStatusCode.Unauthorized;
+                            dataSetDto.Response.Message = "old password not matching with your existing password";
+                            dataSetDto.Response.Data = null;
+                            return dataSetDto;
+                        }
+                    }
+
                     userObj.IMAGE_PATH = param.IMAGE_PATH;
                     if (!string.IsNullOrEmpty(param.USERNAME))
                         userObj.USERNAME = param.USERNAME;
-                    if (!string.IsNullOrEmpty(param.PASSWORD))
-                        userObj.PASSWORD = param.PASSWORD;
+                    if (!string.IsNullOrEmpty(param.OLDPASSWORD) && !string.IsNullOrEmpty(param.NEWPASSWORD))
+                        userObj.PASSWORD = param.NEWPASSWORD;
                     if (!string.IsNullOrEmpty(param.EMAIL))
                         userObj.EMAIL = param.EMAIL;
                     userObj.UPDATED_BY = param.USER_ID;
@@ -244,12 +255,14 @@ namespace SASTI.BusinessLayer
                     dataSetDto.Response.Code = (int)HttpStatusCode.OK;
                     dataSetDto.Response.Message = "Success";
                     dataSetDto.Response.Data = userObj;
+                    return dataSetDto;
                 }
                 else
                 {
                     dataSetDto.Response.Code = (int)HttpStatusCode.BadRequest;
                     dataSetDto.Response.Message = "Unable to find user record";
                     dataSetDto.Response.Data = null;
+                    return dataSetDto;
                 }
                 return dataSetDto;
             }

@@ -105,6 +105,7 @@
     <Compile Include="Dto\ResponseDto.cs" />
     <Compile Include="Dto\SearchProductDto.cs" />
     <Compile Include="Dto\UserDto.cs" />
+    <Compile Include="Dto\UserProfileDto.cs" />
     <Compile Include="Dto\UserRegisterDto.cs" />
     <Compile Include="GROUP.cs">
       <DependentUpon>SASTI.tt</DependentUpon>

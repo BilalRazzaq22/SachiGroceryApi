@@ -620,7 +620,7 @@ namespace SASTI.Controllers.Api
         }
         [HttpPost]
         [Route("api/editProfile")]
-        public HttpResponseMessage editProfile(HttpRequestMessage request, USER u)
+        public HttpResponseMessage editProfile(HttpRequestMessage request, UserProfileDto u)
         {
             UsersLogic usersLogic = new UsersLogic();
             DataSetDto dataSetDto = usersLogic.UpdateUserProfile(u);
