@@ -29,6 +29,7 @@ namespace SASTI.BusinessLayer
         private readonly Lazy<GenericRepository<BARCODE>> _Barcode;
         private readonly Lazy<GenericRepository<RECOMMENDED_PRODUCTS>> _RecommendedProducts;
         private readonly Lazy<GenericRepository<USER_DEVICES>> _UserDevices;
+        private readonly Lazy<GenericRepository<USER_ADDRESSES>> _UserAddresses;
         //private readonly Lazy<GenericRepository<UserReservation>> _LazyReservation;
         //private readonly Lazy<GenericRepository<UserNotification>> _LazyNotify;
         protected readonly Lazy<SpRepository> _LazySp;
@@ -49,6 +50,7 @@ namespace SASTI.BusinessLayer
             _Barcode = new Lazy<GenericRepository<BARCODE>>(() => new GenericRepository<BARCODE>(_unitOfWork));
             _RecommendedProducts = new Lazy<GenericRepository<RECOMMENDED_PRODUCTS>>(() => new GenericRepository<RECOMMENDED_PRODUCTS>(_unitOfWork));
             _UserDevices = new Lazy<GenericRepository<USER_DEVICES>>(() => new GenericRepository<USER_DEVICES>(_unitOfWork));
+            _UserAddresses = new Lazy<GenericRepository<USER_ADDRESSES>>(() => new GenericRepository<USER_ADDRESSES>(_unitOfWork));
             //_LazyBoard = new Lazy<GenericRepository<Board>>(() => new GenericRepository<Board>(_unitOfWork));
             //_LazyReservation = new Lazy<GenericRepository<UserReservation>>(() => new GenericRepository<UserReservation>(_unitOfWork));
 
@@ -68,6 +70,7 @@ namespace SASTI.BusinessLayer
         protected GenericRepository<BARCODE> _barcode { get { return _Barcode.Value; } }
         protected GenericRepository<RECOMMENDED_PRODUCTS> _recommendedProducts { get { return _RecommendedProducts.Value; } }
         protected GenericRepository<USER_DEVICES> _userDevices { get { return _UserDevices.Value; } }
+        protected GenericRepository<USER_ADDRESSES> _userAddresses { get { return _UserAddresses.Value; } }
         //protected GenericRepository<Board> _board { get { return _LazyBoard.Value; } }
         //protected GenericRepository<UserReservation> _userreservation { get { return _LazyReservation.Value; } }
         protected SpRepository _sp { get { return _LazySp.Value; } }

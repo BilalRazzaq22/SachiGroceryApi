@@ -227,7 +227,7 @@ namespace SASTI.BusinessLayer
                 {
                     if (!string.IsNullOrEmpty(param.OLDPASSWORD))
                     {
-                        if(param.OLDPASSWORD != userObj.PASSWORD)
+                        if (param.OLDPASSWORD != userObj.PASSWORD)
                         {
                             dataSetDto.Response.Code = (int)HttpStatusCode.Unauthorized;
                             dataSetDto.Response.Message = "old password not matching with your existing password";
@@ -310,10 +310,10 @@ namespace SASTI.BusinessLayer
             }
         }
 
-        public void CheckDeviceFCMToken(UserDto userDto,USER user)
+        public void CheckDeviceFCMToken(UserDto userDto, USER user)
         {
             var userDevice = _userDevices.Repository.FirstOrDefault(x => x.USER_ID == user.USER_ID && x.DEVICE_ID == userDto.USER_DEVICE_ID);
-            if(userDevice != null)
+            if (userDevice != null)
             {
                 userDevice.FCM_TOKEN = userDto.FCM_Token;
                 _userDevices.Repository.Update(userDevice);
@@ -339,6 +339,22 @@ namespace SASTI.BusinessLayer
                 FCM_TOKEN = userRegisterDto.FCM_Token
             };
             _userDevices.Repository.Add(userDevices);
+        }
+
+        public List<USER_ADDRESSES> SaveUserAddresses(UserAddressDto userAddress)
+        {
+            foreach (var item in userAddress.UserAddresses)
+            {
+                USER_ADDRESSES uaddress = new USER_ADDRESSES()
+                {
+                    CREATED_ON = DateTime.Now,
+                    IS_ACTIVE = true,
+                    ADDRESS = item.Name,
+                    USER_ID = userAddress.UserId
+                };
+                _userAddresses.Repository.Add(uaddress);
+            }
+            return _userAddresses.Repository.GetAll().Where(x => x.USER_ID == userAddress.UserId).ToList();
         }
 
         //public AjaxResponse UpdateUser(InputUserModel param)

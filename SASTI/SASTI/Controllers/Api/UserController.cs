@@ -518,6 +518,31 @@ namespace SASTI.Controllers.Api
                 return JsonResponse.GetResponse(Enums.ResponseCode.Exception, ex.Message);
             }
         }
+
+        [HttpPost]
+        [Route("api/saveUserAddresses")]
+        public HttpResponseMessage saveUserAddresses(HttpRequestMessage request, UserAddressDto userAddress)
+        {
+            DataSetDto dataSetDto = new DataSetDto();   
+            UsersLogic usersLogic = new UsersLogic();
+            var obj = usersLogic.SaveUserAddresses(userAddress);
+
+            if(obj.Count > 0)
+            {
+                dataSetDto.Response.Code = (int)HttpStatusCode.Forbidden;
+                dataSetDto.Response.Message = "User addresses saved successfully";
+                dataSetDto.Response.Data = obj;
+                return request.CreateResponse(HttpStatusCode.Forbidden, dataSetDto);
+            }
+            else
+            {
+                dataSetDto.Response.Code = (int)HttpStatusCode.Forbidden;
+                dataSetDto.Response.Message = "Unable to saved user addresses";
+                dataSetDto.Response.Data = null;
+                return request.CreateResponse(HttpStatusCode.Forbidden, dataSetDto);
+            }
+        }
+
         [HttpGet]
         [Route("api/GetAllAddressesByCustomerId")]
         public ApiResponse GetAllAddressesByCustomerId(int userId)
