@@ -168,6 +168,16 @@
     <Compile Include="Models\RiderOrderDto.cs" />
     <Compile Include="Models\UserOrders.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SMSApiService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
@@ -208,6 +218,36 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Web References\SMSApiService\CampaignsResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\SMSApiService\CorporateSMS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\SMSApiService\CorporateSMS0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\SMSApiService\CorporateSMS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Web References\SMSApiService\CounterResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\SMSApiService\InboxResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\SMSApiService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\SMSApiService\reportResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\SMSApiService\Service1.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SASTI.BusinessLayer\SASTI.BusinessLayer.csproj">
@@ -229,6 +269,22 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://cbs.zong.com.pk/reachcwsv2/corporatesms.svc%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SMSApiService\</RelPath>
+      <UpdateFromURL>https://cbs.zong.com.pk/reachcwsv2/corporatesms.svc%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>SASTI_SMSApiService_Service1</CachedSettingsPropName>
+    </WebReferenceUrl>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -15,5 +15,8 @@ namespace SASTI.Models.Dto
     public class address
     {
         public string Name { get; set; }
+        public int BranchId { get; set; }
+        public string Latitude { get; set; }
+        public string Longitude { get; set; }
     }
 }

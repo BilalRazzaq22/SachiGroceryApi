@@ -47,7 +47,6 @@
         <EntityTypeShape EntityType="SASTI.SUBMENU" Width="1.5" PointX="6.75" PointY="18.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SASTI.sysdiagram" Width="1.5" PointX="18.75" PointY="7.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SASTI.TEMP_CUSTOMERS" Width="1.5" PointX="8.75" PointY="18.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SASTI.USER_ADDRESSES" Width="1.5" PointX="18.75" PointY="10.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SASTI.USER_DEVICES" Width="1.5" PointX="18.75" PointY="14.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SASTI.USER_FAVOURITES" Width="1.5" PointX="18.75" PointY="17.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SASTI.USER_TYPES" Width="1.5" PointX="14.75" PointY="19.75" IsExpanded="true" />
@@ -66,6 +65,7 @@
         <EntityTypeShape EntityType="SASTI.TEST" Width="1.5" PointX="18.75" PointY="22.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SASTI.ItemList" Width="1.5" PointX="24.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SASTI.Report" Width="1.5" PointX="24.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SASTI.USER_ADDRESSES" Width="1.5" PointX="11.375" PointY="24.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

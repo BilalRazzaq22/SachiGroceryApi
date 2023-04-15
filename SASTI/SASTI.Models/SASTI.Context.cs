@@ -69,7 +69,6 @@ namespace SASTI.Models
         public virtual DbSet<SUBMENU> SUBMENUs { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TEMP_CUSTOMERS> TEMP_CUSTOMERS { get; set; }
-        public virtual DbSet<USER_ADDRESSES> USER_ADDRESSES { get; set; }
         public virtual DbSet<USER_DEVICES> USER_DEVICES { get; set; }
         public virtual DbSet<USER_FAVOURITES> USER_FAVOURITES { get; set; }
         public virtual DbSet<USER_TYPES> USER_TYPES { get; set; }
@@ -88,6 +87,7 @@ namespace SASTI.Models
         public virtual DbSet<TEST> TESTs { get; set; }
         public virtual DbSet<ItemList> ItemLists { get; set; }
         public virtual DbSet<Report> Reports { get; set; }
+        public virtual DbSet<USER_ADDRESSES> USER_ADDRESSES { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {
@@ -419,7 +419,7 @@ namespace SASTI.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SpGetAllProductReviewsHome_Result>("SpGetAllProductReviewsHome", pageIndexParameter);
         }
     
-        public virtual ObjectResult<SpGetAllProducts_Result> SpGetAllProducts(Nullable<int> pageIndex, Nullable<int> pageSize, string sortColumn, string sortOrder, string searchText, string categoryId, string subCategoryId, string groupId, Nullable<int> branchId)
+        public virtual ObjectResult<SpGetAllProducts_Result> SpGetAllProducts(Nullable<int> pageIndex, Nullable<int> pageSize, string sortColumn, string sortOrder, string searchText, string categoryId, string subCategoryId, string groupId, Nullable<int> branchId, Nullable<int> minPrice, Nullable<int> maxPrice, Nullable<int> userId)
         {
             var pageIndexParameter = pageIndex.HasValue ?
                 new ObjectParameter("PageIndex", pageIndex) :
@@ -457,7 +457,19 @@ namespace SASTI.Models
                 new ObjectParameter("BranchId", branchId) :
                 new ObjectParameter("BranchId", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SpGetAllProducts_Result>("SpGetAllProducts", pageIndexParameter, pageSizeParameter, sortColumnParameter, sortOrderParameter, searchTextParameter, categoryIdParameter, subCategoryIdParameter, groupIdParameter, branchIdParameter);
+            var minPriceParameter = minPrice.HasValue ?
+                new ObjectParameter("MinPrice", minPrice) :
+                new ObjectParameter("MinPrice", typeof(int));
+    
+            var maxPriceParameter = maxPrice.HasValue ?
+                new ObjectParameter("MaxPrice", maxPrice) :
+                new ObjectParameter("MaxPrice", typeof(int));
+    
+            var userIdParameter = userId.HasValue ?
+                new ObjectParameter("UserId", userId) :
+                new ObjectParameter("UserId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SpGetAllProducts_Result>("SpGetAllProducts", pageIndexParameter, pageSizeParameter, sortColumnParameter, sortOrderParameter, searchTextParameter, categoryIdParameter, subCategoryIdParameter, groupIdParameter, branchIdParameter, minPriceParameter, maxPriceParameter, userIdParameter);
         }
     
         public virtual ObjectResult<SPGetAllRecommendedProducts_Result> SPGetAllRecommendedProducts(Nullable<int> pageIndex, Nullable<int> pageSize)

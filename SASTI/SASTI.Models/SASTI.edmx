@@ -4,14 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="SASTI.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'anytimea_GROCERY.dbo.A_TEMP' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="A_TEMP">
-          <Property Name="ITEM_CODE" Type="int" />
-          <Property Name="ITEM_DESC" Type="nvarchar(max)" />
-          <Property Name="ITEM_DESC_LONG" Type="nvarchar(max)" />
-        </EntityType>-->
+    <Schema Namespace="SASTI.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="ADS">
           <Key>
             <PropertyRef Name="AD_ID" />
@@ -25,13 +18,6 @@ warning 6013: The table/view 'anytimea_GROCERY.dbo.A_TEMP' does not have a prima
           <Property Name="UPDATED_ON" Type="datetime" />
           <Property Name="IS_ACTIVE" Type="varchar" MaxLength="50" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'anytimea_GROCERY.dbo.API_LOGS' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="API_LOGS">
-          <Property Name="API_LOG_ID" Type="int" />
-          <Property Name="DESCRIPTION" Type="nvarchar(max)" />
-          <Property Name="CALLED_ON" Type="datetime" />
-        </EntityType>-->
         <EntityType Name="AREAS">
           <Key>
             <PropertyRef Name="AREA_ID" />
@@ -886,14 +872,6 @@ warning 6002: The table/view 'anytimea_GROCERY.dbo.ITEMINFO' does not have a pri
           <Property Name="PRODUCT_ID" Type="int" />
           <Property Name="TAG_NAME" Type="nvarchar(max)" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'anytimea_GROCERY.dbo.Product_Temp_Load' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="Product_Temp_Load">
-          <Property Name="NAME" Type="nvarchar(max)" />
-          <Property Name="DESCRIPTION" Type="varchar(max)" />
-          <Property Name="UNIT_OF_MEASUREMENT" Type="nvarchar(max)" />
-          <Property Name="AVG_COST" Type="money" />
-        </EntityType>-->
         <EntityType Name="PRODUCT_TYPES">
           <Key>
             <PropertyRef Name="PRODUCT_TYPE_ID" />
@@ -1429,19 +1407,6 @@ warning 6002: The table/view 'anytimea_GROCERY.dbo.TEST' does not have a primary
           <Property Name="DESCRIPTION" Type="varchar" MaxLength="200" Nullable="false" />
           <Property Name="AVG_COST" Type="decimal" Precision="9" Scale="2" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'anytimea_GROCERY.dbo.Transaction' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="Transaction">
-          <Property Name="TransactionID" Type="int" />
-          <Property Name="ProductID" Type="int" />
-          <Property Name="ReferenceOrderID" Type="int" />
-          <Property Name="ReferenceOrderLineID" Type="int" />
-          <Property Name="TransactionDate" Type="datetime" />
-          <Property Name="TransactionType" Type="nvarchar" MaxLength="1" />
-          <Property Name="Quantity" Type="int" />
-          <Property Name="ActualCost" Type="money" />
-          <Property Name="ModifiedDate" Type="datetime" />
-        </EntityType>-->
         <EntityType Name="USER_ADDRESSES">
           <Key>
             <PropertyRef Name="USER_ADDRESS_ID" />
@@ -1449,6 +1414,9 @@ warning 6013: The table/view 'anytimea_GROCERY.dbo.Transaction' does not have a 
           <Property Name="USER_ADDRESS_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="USER_ID" Type="int" />
           <Property Name="ADDRESS" Type="nvarchar(max)" />
+          <Property Name="BRANCH_ID" Type="int" />
+          <Property Name="LONGITUDE" Type="nvarchar" MaxLength="50" />
+          <Property Name="LATITUDE" Type="nvarchar" MaxLength="50" />
           <Property Name="IS_ACTIVE" Type="bit" />
           <Property Name="CREATED_BY" Type="int" />
           <Property Name="CREATED_ON" Type="datetime" />
@@ -1715,6 +1683,9 @@ warning 6002: The table/view 'anytimea_GROCERY.anytimea_ADMIN.Report' does not h
           <Parameter Name="SubCategoryId" Type="nvarchar" Mode="In" />
           <Parameter Name="GroupId" Type="nvarchar" Mode="In" />
           <Parameter Name="BranchId" Type="int" Mode="In" />
+          <Parameter Name="MinPrice" Type="int" Mode="In" />
+          <Parameter Name="MaxPrice" Type="int" Mode="In" />
+          <Parameter Name="UserId" Type="int" Mode="In" />
         </Function>
         <Function Name="SPGetAllRecommendedProducts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="PageIndex" Type="int" Mode="In" />
@@ -2283,8 +2254,7 @@ warning 6002: The table/view 'anytimea_GROCERY.anytimea_ADMIN.Report' does not h
     FROM [anytimea_ADMIN].[Report] AS [Report]</DefiningQuery>
           </EntitySet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SASTI" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -2893,19 +2863,6 @@ warning 6002: The table/view 'anytimea_GROCERY.anytimea_ADMIN.Report' does not h
           <Property Name="NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="PHONE" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="ADDRESS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="USER_ADDRESSES">
-          <Key>
-            <PropertyRef Name="USER_ADDRESS_ID" />
-          </Key>
-          <Property Name="USER_ADDRESS_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="USER_ID" Type="Int32" />
-          <Property Name="ADDRESS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="IS_ACTIVE" Type="Boolean" />
-          <Property Name="CREATED_BY" Type="Int32" />
-          <Property Name="CREATED_ON" Type="DateTime" Precision="3" />
-          <Property Name="UPDATED_BY" Type="Int32" />
-          <Property Name="UPDATED_ON" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="USER_DEVICES">
           <Key>
@@ -3884,7 +3841,6 @@ warning 6002: The table/view 'anytimea_GROCERY.anytimea_ADMIN.Report' does not h
           <EntitySet Name="SUBMENUs" EntityType="Self.SUBMENU" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="TEMP_CUSTOMERS" EntityType="Self.TEMP_CUSTOMERS" />
-          <EntitySet Name="USER_ADDRESSES" EntityType="Self.USER_ADDRESSES" />
           <EntitySet Name="USER_DEVICES" EntityType="Self.USER_DEVICES" />
           <EntitySet Name="USER_FAVOURITES" EntityType="Self.USER_FAVOURITES" />
           <EntitySet Name="USER_TYPES" EntityType="Self.USER_TYPES" />
@@ -3948,7 +3904,7 @@ warning 6002: The table/view 'anytimea_GROCERY.anytimea_ADMIN.Report' does not h
             <Parameter Name="SearchText" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="SpGetAllBannersHome" ReturnType="Collection(SASTI.SpGetAllBannersHome_Result)">
-            <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+          <Parameter Name="PageIndex" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SpGetAllBlogs" ReturnType="Collection(SASTI.SpGetAllBlogs_Result)">
             <Parameter Name="PageIndex" Mode="In" Type="Int32" />
@@ -3992,7 +3948,7 @@ warning 6002: The table/view 'anytimea_GROCERY.anytimea_ADMIN.Report' does not h
             <Parameter Name="SearchText" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="SpGetAllProductReviewsHome" ReturnType="Collection(SASTI.SpGetAllProductReviewsHome_Result)">
-            <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+          <Parameter Name="PageIndex" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SpGetAllProducts" ReturnType="Collection(SASTI.SpGetAllProducts_Result)">
             <Parameter Name="PageIndex" Mode="In" Type="Int32" />
@@ -4004,16 +3960,19 @@ warning 6002: The table/view 'anytimea_GROCERY.anytimea_ADMIN.Report' does not h
             <Parameter Name="SubCategoryId" Mode="In" Type="String" />
             <Parameter Name="GroupId" Mode="In" Type="String" />
             <Parameter Name="BranchId" Mode="In" Type="Int32" />
+            <Parameter Name="MinPrice" Mode="In" Type="Int32" />
+            <Parameter Name="MaxPrice" Mode="In" Type="Int32" />
+            <Parameter Name="UserId" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SPGetAllRecommendedProducts" ReturnType="Collection(SASTI.SPGetAllRecommendedProducts_Result)">
             <Parameter Name="PageIndex" Mode="In" Type="Int32" />
             <Parameter Name="PageSize" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SpGetBlogDetailByBlogTitleUrl" ReturnType="Collection(SASTI.SpGetBlogDetailByBlogTitleUrl_Result)">
-            <Parameter Name="BlogTitleUrl" Mode="In" Type="String" />
+          <Parameter Name="BlogTitleUrl" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="SpGetHomeBlogs" ReturnType="Collection(SASTI.SpGetHomeBlogs_Result)">
-            <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+          <Parameter Name="PageIndex" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SpGetHomeProducts" ReturnType="Collection(SASTI.SpGetHomeProducts_Result)">
             <Parameter Name="CategoryId" Mode="In" Type="Int32" />
@@ -4024,7 +3983,7 @@ warning 6002: The table/view 'anytimea_GROCERY.anytimea_ADMIN.Report' does not h
             <Parameter Name="BranchId" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SpGetProductImagesByProductId" ReturnType="Collection(SASTI.SpGetProductImagesByProductId_Result)">
-            <Parameter Name="ProductId" Mode="In" Type="Int32" />
+          <Parameter Name="ProductId" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SpGetProductReviewsByProductId" ReturnType="Collection(SASTI.SpGetProductReviewsByProductId_Result)">
             <Parameter Name="PRODUCT_ID" Mode="In" Type="Int64" />
@@ -4035,10 +3994,10 @@ warning 6002: The table/view 'anytimea_GROCERY.anytimea_ADMIN.Report' does not h
             <Parameter Name="SearchText" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="SPGetSearchProducts" ReturnType="Collection(SASTI.SPGetSearchProducts_Result)">
-            <Parameter Name="ProductName" Mode="In" Type="String" />
+          <Parameter Name="ProductName" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="SpGetUserProfileById" ReturnType="Collection(SASTI.SpGetUserProfileById_Result)">
-            <Parameter Name="UserId" Mode="In" Type="Int32" />
+          <Parameter Name="UserId" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SpGetWishList" ReturnType="Collection(SASTI.SpGetWishList_Result)">
             <Parameter Name="PageIndex" Mode="In" Type="Int32" />
@@ -4048,6 +4007,7 @@ warning 6002: The table/view 'anytimea_GROCERY.anytimea_ADMIN.Report' does not h
             <Parameter Name="SearchText" Mode="In" Type="String" />
             <Parameter Name="USER_ID" Mode="In" Type="Int32" />
           </FunctionImport>
+          <EntitySet Name="USER_ADDRESSES" EntityType="SASTI.USER_ADDRESSES" />
         </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
@@ -4469,6 +4429,22 @@ warning 6002: The table/view 'anytimea_GROCERY.anytimea_ADMIN.Report' does not h
           <Property Type="Int32" Name="Start" Nullable="true" />
           <Property Type="Int32" Name="End" Nullable="true" />
         </ComplexType>
+        <EntityType Name="USER_ADDRESSES">
+          <Key>
+            <PropertyRef Name="USER_ADDRESS_ID" />
+          </Key>
+          <Property Name="USER_ADDRESS_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USER_ID" Type="Int32" />
+          <Property Name="ADDRESS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BRANCH_ID" Type="Int32" />
+          <Property Name="LONGITUDE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LATITUDE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IS_ACTIVE" Type="Boolean" />
+          <Property Name="CREATED_BY" Type="Int32" />
+          <Property Name="CREATED_ON" Type="DateTime" Precision="3" />
+          <Property Name="UPDATED_BY" Type="Int32" />
+          <Property Name="UPDATED_ON" Type="DateTime" Precision="3" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -5118,20 +5094,6 @@ warning 6002: The table/view 'anytimea_GROCERY.anytimea_ADMIN.Report' does not h
                 <ScalarProperty Name="NAME" ColumnName="NAME" />
                 <ScalarProperty Name="PHONE" ColumnName="PHONE" />
                 <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="USER_ADDRESSES">
-            <EntityTypeMapping TypeName="SASTI.USER_ADDRESSES">
-              <MappingFragment StoreEntitySet="USER_ADDRESSES">
-                <ScalarProperty Name="USER_ADDRESS_ID" ColumnName="USER_ADDRESS_ID" />
-                <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
-                <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
-                <ScalarProperty Name="IS_ACTIVE" ColumnName="IS_ACTIVE" />
-                <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
-                <ScalarProperty Name="CREATED_ON" ColumnName="CREATED_ON" />
-                <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
-                <ScalarProperty Name="UPDATED_ON" ColumnName="UPDATED_ON" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -6271,6 +6233,23 @@ warning 6002: The table/view 'anytimea_GROCERY.anytimea_ADMIN.Report' does not h
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <EntitySetMapping Name="USER_ADDRESSES">
+            <EntityTypeMapping TypeName="SASTI.USER_ADDRESSES">
+              <MappingFragment StoreEntitySet="USER_ADDRESSES">
+                <ScalarProperty Name="UPDATED_ON" ColumnName="UPDATED_ON" />
+                <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+                <ScalarProperty Name="CREATED_ON" ColumnName="CREATED_ON" />
+                <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+                <ScalarProperty Name="IS_ACTIVE" ColumnName="IS_ACTIVE" />
+                <ScalarProperty Name="LATITUDE" ColumnName="LATITUDE" />
+                <ScalarProperty Name="LONGITUDE" ColumnName="LONGITUDE" />
+                <ScalarProperty Name="BRANCH_ID" ColumnName="BRANCH_ID" />
+                <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+                <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+                <ScalarProperty Name="USER_ADDRESS_ID" ColumnName="USER_ADDRESS_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

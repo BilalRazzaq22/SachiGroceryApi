@@ -343,16 +343,45 @@ namespace SASTI.BusinessLayer
 
         public List<USER_ADDRESSES> SaveUserAddresses(UserAddressDto userAddress)
         {
+            //var userAdd = _userAddresses.Repository.GetAll().Where(x => x.USER_ID == userAddress.UserId).ToList();
+            
             foreach (var item in userAddress.UserAddresses)
             {
-                USER_ADDRESSES uaddress = new USER_ADDRESSES()
+                var ua = _userAddresses.Repository.GetAll().FirstOrDefault(x => x.USER_ID == userAddress.UserId && x.LATITUDE == item.Latitude && x.LONGITUDE == item.Longitude && x.IS_ACTIVE == true);
+                if (ua == null)
                 {
-                    CREATED_ON = DateTime.Now,
-                    IS_ACTIVE = true,
-                    ADDRESS = item.Name,
-                    USER_ID = userAddress.UserId
-                };
-                _userAddresses.Repository.Add(uaddress);
+                    USER_ADDRESSES uaddress = new USER_ADDRESSES()
+                    {
+                        CREATED_ON = DateTime.Now,
+                        IS_ACTIVE = true,
+                        ADDRESS = item.Name,
+                        USER_ID = userAddress.UserId,
+                        LATITUDE = item.Latitude,
+                        LONGITUDE = item.Longitude,
+                        BRANCH_ID=item.BranchId
+                    };
+                    _userAddresses.Repository.Add(uaddress);
+                }
+                else
+                {
+                    ua.ADDRESS = item.Name;
+                    ua.UPDATED_ON = DateTime.Now;
+                    ua.IS_ACTIVE = true;
+
+                    //USER_ADDRESSES uaddress = new USER_ADDRESSES()
+                    //{
+                    //    USER_ADDRESS_ID = ua.USER_ADDRESS_ID,
+                    //    UPDATED_ON = DateTime.Now,
+                    //    IS_ACTIVE = true,
+                    //    ADDRESS = item.Name,
+                    //    USER_ID = userAddress.UserId,
+                    //    LATITUDE = ua.LATITUDE,
+                    //    LONGITUDE = ua.LONGITUDE,
+                    //    BRANCH_ID = ua.BRANCH_ID
+                    //};
+                    _userAddresses.Repository.Update(ua);
+                }
+                
             }
             return _userAddresses.Repository.GetAll().Where(x => x.USER_ID == userAddress.UserId).ToList();
         }

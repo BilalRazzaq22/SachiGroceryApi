@@ -20,7 +20,7 @@ namespace SASTI.DataCore
         const string QRY_TEMP_CUSTOMER = "select * from temp_customers where temp_customer_id = {0}";
         const string QRY_AUTHENTICATE_USER = "select * from users where username = '{0}' and password = '{1}' and IS_ACTIVE = 1 ";
         const string QRY_AUTHENTICATE_USER_BY_MOBILE = "select * from users where ( MOBILE_NO = '{0}' or email='{0}' ) and IS_ACTIVE = 1 ";
-        const string QRY_GET_ALL_ADDRESSES = "select * from USER_ADDRESSES where USER_ID = {0}";
+        const string QRY_GET_ALL_ADDRESSES = "select * from USER_ADDRESSES where USER_ID = {0} AND IS_ACTIVE = 1";
         const string QRY_CHECK_MOBILE_EXIST = "select * from USERS where MOBILE_NO = '{0}'";
         const string QRY_CHECK_MOBILE_EMAIL_EXIST = "select * from USERS where MOBILE_NO = '{0}' or email='{1}'";
         const string QRY_CHECK_USERNAME_EXIST = "select * from USERS where username = '{0}'";
