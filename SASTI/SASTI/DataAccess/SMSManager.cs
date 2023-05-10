@@ -21,8 +21,8 @@ namespace SASTI.DataAccess
             if (toNumber.Length == 12 && toNumber.Substring(0, 2).Equals("92"))
             {
                 count++;
-               var res= SendSMS(Masking, toNumber, MessageText, MyUsername, MyPassword);
             }
+            var res = SendSMS(Masking, toNumber, MessageText, MyUsername, MyPassword);
             return count;
         }
         #endregion

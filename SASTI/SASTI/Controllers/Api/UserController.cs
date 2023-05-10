@@ -529,10 +529,10 @@ namespace SASTI.Controllers.Api
 
             if(obj.Count > 0)
             {
-                dataSetDto.Response.Code = (int)HttpStatusCode.Forbidden;
+                dataSetDto.Response.Code = (int)HttpStatusCode.OK;
                 dataSetDto.Response.Message = "User addresses saved successfully";
                 dataSetDto.Response.Data = obj;
-                return request.CreateResponse(HttpStatusCode.Forbidden, dataSetDto);
+                return request.CreateResponse(HttpStatusCode.OK, dataSetDto);
             }
             else
             {
