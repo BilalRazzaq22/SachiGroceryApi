@@ -18,6 +18,12 @@ namespace SASTI.DataAccess
             string MyPassword = "Zong@123";
             string Masking = "SachiChakki";
             int count = 0;
+
+            if (toNumber.Substring(0, 1).Equals("0"))
+            {
+                toNumber = toNumber.Remove(0, 1).Insert(0, "92");
+            }
+
             if (toNumber.Length == 12 && toNumber.Substring(0, 2).Equals("92"))
             {
                 count++;
