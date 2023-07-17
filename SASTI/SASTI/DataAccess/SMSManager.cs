@@ -45,20 +45,27 @@ namespace SASTI.DataAccess
             //var sr = new System.IO.StreamReader(resp.GetResponseStream());
             //return sr.ReadToEnd().Trim();
 
-            SMSApiService.QuickSMSResquest quickSMSResquest = new SMSApiService.QuickSMSResquest()
+            try
             {
-                loginId = MyUsername,
-                loginPassword = MyPassword,
-                Destination = toNumber,
-                Mask = Masking,
-                Message = MessageText,
-                ShortCodePrefered = "n",
-                UniCode = "0"
-            };
+                SMSApiService.QuickSMSResquest quickSMSResquest = new SMSApiService.QuickSMSResquest()
+                {
+                    loginId = MyUsername,
+                    loginPassword = MyPassword,
+                    Destination = toNumber,
+                    Mask = Masking,
+                    Message = MessageText,
+                    ShortCodePrefered = "n",
+                    UniCode = "0"
+                };
 
-            SMSApiService.BasicHttpBinding_ICorporateCBS client = new SMSApiService.BasicHttpBinding_ICorporateCBS();
-            string message = client.QuickSMS(quickSMSResquest);
-            return message;
+                SMSApiService.BasicHttpBinding_ICorporateCBS client = new SMSApiService.BasicHttpBinding_ICorporateCBS();
+                string message = client.QuickSMS(quickSMSResquest);
+                return message;
+            }
+            catch (Exception ex)
+            {
+                return "";
+            }
         }
         #endregion
 
