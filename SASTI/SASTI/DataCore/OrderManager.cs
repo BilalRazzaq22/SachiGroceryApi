@@ -28,7 +28,7 @@ namespace SASTI.DataCore
         const string QRY_GET_ALL_CUSTOMER_ORDERS = @"SELECT O.ORDER_ID,O.CUSTOMER_ID,O.NAME,O.MOBILE,O.ADDRESS,O.STATUS,O.CREATED_ON,O.CREATED_BY,O.ASSIGNED_ON,O.ASSIGNED_BY,
                                                     O.SENT_TO_RIDER_ON,O.SENT_TO_RIDER_BY,O.UPDATED_ON,O.UPDATED_BY,O.RIDER_ID,O.REJECTED_BY,O.REJECTED_REASON,O.DELIVERY_TIME,
                                                     O.IS_ACTIVE,O.BRANCH_ID,O.DELIVERY_DESCRIPTION,O.PAYMENT_MODE_ID,O.MANUAL_DISCOUNT,O.COUPON_ID,O.COUPON_DISCOUNT,O.PICKUP_TIME,O.IS_PACKAGE,O.ADDED_BY,
-                                                    BR.ADDRESS,(SUM(B.UNIT_PRICE * OP.QUANTITY) - O.MANUAL_DISCOUNT) AS TOTAL_PRICE,COUNT(OP.ORDER_ID) AS TOTAL_ITEMS FROM ORDERS O
+                                                    BR.ADDRESS,(SUM(B.UNIT_PRICE * OP.QUANTITY) - O.MANUAL_DISCOUNT + O.DeliveryFee) AS TOTAL_PRICE,O.DeliveryFee,COUNT(OP.ORDER_ID) AS TOTAL_ITEMS FROM ORDERS O
                                                     INNER JOIN BRANCHES BR on O.BRANCH_ID = BR.BRANCH_ID
                                                     INNER JOIN ORDER_PRODUCTS OP ON OP.ORDER_ID = O.ORDER_ID
                                                     INNER JOIN BARCODES B ON B.BAR_CODE = OP.BAR_CODE
@@ -36,10 +36,10 @@ namespace SASTI.DataCore
                                                     WHERE O.CUSTOMER_ID = {0} AND B.bDEFAULT = 1 AND B.IsActive = 1 AND B.LOCNO = O.BRANCH_ID AND OP.IS_ACTIVE = 1 AND O.STATUS IN (1,2,3,4,5,6,7)
                                                     GROUP BY O.ORDER_ID,O.CUSTOMER_ID,O.NAME,O.MOBILE,O.ADDRESS,O.STATUS,O.CREATED_ON,O.CREATED_BY,O.ASSIGNED_ON,O.ASSIGNED_BY,
                                                     O.SENT_TO_RIDER_ON,O.SENT_TO_RIDER_BY,O.UPDATED_ON,O.UPDATED_BY,O.RIDER_ID,O.REJECTED_BY,O.REJECTED_REASON,O.DELIVERY_TIME,
-                                                    O.IS_ACTIVE,O.BRANCH_ID,O.DELIVERY_DESCRIPTION,O.PAYMENT_MODE_ID,O.MANUAL_DISCOUNT,O.COUPON_ID,O.COUPON_DISCOUNT,O.PICKUP_TIME,O.IS_PACKAGE,O.ADDED_BY,BR.ADDRESS
+                                                    O.IS_ACTIVE,O.BRANCH_ID,O.DELIVERY_DESCRIPTION,O.PAYMENT_MODE_ID,O.MANUAL_DISCOUNT,O.COUPON_ID,O.COUPON_DISCOUNT,O.PICKUP_TIME,O.IS_PACKAGE,O.ADDED_BY,BR.ADDRESS,O.DeliveryFee
                                                     order by CREATED_ON desc OFFSET {1} ROWS FETCH NEXT 100 ROWS ONLY";
 
-        const string QRY_GET_ORDER_DETAILS = @"SELECT O.RIDER_ID,OP.*,P.*,b.*,(select TOP 1 CHAARSU_IMAGE_PATH from PRODUCT_IMAGES where PRODUCT_ID = P.PRODUCT_ID) AS CHAARSU_IMAGE_PATH,
+        const string QRY_GET_ORDER_DETAILS = @"SELECT O.RIDER_ID,CASE WHEN (O.DeliveryFee IS NULL) THEN 0.0 ELSE O.DeliveryFee END AS DeliveryFee,OP.*,P.*,b.*,(select TOP 1 CHAARSU_IMAGE_PATH from PRODUCT_IMAGES where PRODUCT_ID = P.PRODUCT_ID) AS CHAARSU_IMAGE_PATH,
                                              (select TOP 1 CHAARSU_THUMBNAIL_PATH from PRODUCT_IMAGES where PRODUCT_ID = P.PRODUCT_ID) AS CHAARSU_THUMBNAIL_PATH FROM ORDER_PRODUCTS OP 
                                              INNER JOIN ORDERS O ON OP.ORDER_ID = O.ORDER_ID
                                              inner join BARCODES b on OP.BAR_CODE = B.BAR_CODE
@@ -145,7 +145,9 @@ namespace SASTI.DataCore
                 SENT_TO_RIDER_ON = orderDto.SENT_TO_RIDER_ON,
                 STATUS = orderDto.STATUS,
                 UPDATED_BY = orderDto.UPDATED_BY,
-                UPDATED_ON = orderDto.UPDATED_ON
+                UPDATED_ON = orderDto.UPDATED_ON,
+                DeliveryFee = orderDto.DeliveryFee,
+                EntryType = "MOBILE"
             };
 
             if (!string.IsNullOrEmpty(orderDto.DELIVERY_TIME))
@@ -210,6 +212,10 @@ namespace SASTI.DataCore
                     });
             });
 
+            if (opd.TotalPrice > 0)
+            {
+                opd.TotalPrice = opd.TotalPrice + (decimal)order.DeliveryFee;
+            }
             opd.TotalItems = orderProduct.Count;
             //opd.TotalPrice = opd.Products.Sum(x => x.PRICE);
 

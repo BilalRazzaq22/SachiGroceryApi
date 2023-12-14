@@ -139,6 +139,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\Api\BusinessCoreController.cs" />
+    <Compile Include="Controllers\Api\ConfigurationController.cs" />
     <Compile Include="Controllers\Api\DriverController.cs" />
     <Compile Include="Controllers\Api\GeneralController.cs" />
     <Compile Include="Controllers\Api\NotificationController.cs" />

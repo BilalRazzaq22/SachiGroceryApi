@@ -27,11 +27,21 @@ namespace SASTI.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<BANNER> BANNERS { get; set; }
+        public virtual DbSet<ORDER_PRODUCTS> ORDER_PRODUCTS { get; set; }
+        public virtual DbSet<PRODUCT_IMAGES> PRODUCT_IMAGES { get; set; }
+        public virtual DbSet<PRODUCT> PRODUCTS { get; set; }
+        public virtual DbSet<RECOMMENDED_PRODUCTS> RECOMMENDED_PRODUCTS { get; set; }
+        public virtual DbSet<USER_ADDRESSES> USER_ADDRESSES { get; set; }
+        public virtual DbSet<USER_DEVICES> USER_DEVICES { get; set; }
+        public virtual DbSet<USER_FAVOURITES> USER_FAVOURITES { get; set; }
+        public virtual DbSet<USER> USERS { get; set; }
+        public virtual DbSet<ItemList> ItemLists { get; set; }
+        public virtual DbSet<Report> Reports { get; set; }
         public virtual DbSet<AD> ADS { get; set; }
         public virtual DbSet<AREA> AREAS { get; set; }
         public virtual DbSet<BANNER_IMAGES> BANNER_IMAGES { get; set; }
-        public virtual DbSet<BANNER> BANNERS { get; set; }
-        public virtual DbSet<BARCODESTest> BARCODESTests { get; set; }
+        public virtual DbSet<BARCODE> BARCODES { get; set; }
         public virtual DbSet<Blog> Blogs { get; set; }
         public virtual DbSet<BRANCH> BRANCHES { get; set; }
         public virtual DbSet<BRAND> BRANDS { get; set; }
@@ -41,53 +51,36 @@ namespace SASTI.Models
         public virtual DbSet<ContactU> ContactUs { get; set; }
         public virtual DbSet<COUPON> COUPONS { get; set; }
         public virtual DbSet<GROUP> GROUPS { get; set; }
+        public virtual DbSet<ITEMINFO> ITEMINFOes { get; set; }
         public virtual DbSet<MAINMENU> MAINMENUs { get; set; }
         public virtual DbSet<OFFER_MANAGEMENT> OFFER_MANAGEMENT { get; set; }
         public virtual DbSet<ONLINE_TRANSACTION> ONLINE_TRANSACTION { get; set; }
-        public virtual DbSet<ORDER_PRODUCTS> ORDER_PRODUCTS { get; set; }
         public virtual DbSet<ORDER_STATUSES> ORDER_STATUSES { get; set; }
-        public virtual DbSet<ORDER> ORDERS { get; set; }
         public virtual DbSet<PACKAGE_PRODUCTS> PACKAGE_PRODUCTS { get; set; }
         public virtual DbSet<PACKAGE> PACKAGES { get; set; }
         public virtual DbSet<PAYMENT_MODES> PAYMENT_MODES { get; set; }
         public virtual DbSet<PRODUCT_BRANDS> PRODUCT_BRANDS { get; set; }
         public virtual DbSet<PRODUCT_COLORS> PRODUCT_COLORS { get; set; }
         public virtual DbSet<PRODUCT_FLAVORS> PRODUCT_FLAVORS { get; set; }
-        public virtual DbSet<PRODUCT_IMAGES> PRODUCT_IMAGES { get; set; }
         public virtual DbSet<PRODUCT_LEVELS> PRODUCT_LEVELS { get; set; }
         public virtual DbSet<PRODUCT_PACKINGS> PRODUCT_PACKINGS { get; set; }
         public virtual DbSet<PRODUCT_REVIEWS> PRODUCT_REVIEWS { get; set; }
         public virtual DbSet<PRODUCT_TAGS> PRODUCT_TAGS { get; set; }
         public virtual DbSet<PRODUCT_TYPES> PRODUCT_TYPES { get; set; }
-        public virtual DbSet<PRODUCT> PRODUCTS { get; set; }
-        public virtual DbSet<ProductTest> ProductTests { get; set; }
-        public virtual DbSet<RECOMMENDED_PRODUCTS> RECOMMENDED_PRODUCTS { get; set; }
+        public virtual DbSet<PS000> PS000 { get; set; }
         public virtual DbSet<RIDER_ORDER> RIDER_ORDER { get; set; }
         public virtual DbSet<SM> SMS { get; set; }
         public virtual DbSet<SMS_TYPES> SMS_TYPES { get; set; }
+        public virtual DbSet<STOCK> STOCKs { get; set; }
         public virtual DbSet<SUB_CATEGORIES> SUB_CATEGORIES { get; set; }
         public virtual DbSet<SUBMENU> SUBMENUs { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
-        public virtual DbSet<TEMP_CUSTOMERS> TEMP_CUSTOMERS { get; set; }
-        public virtual DbSet<USER_DEVICES> USER_DEVICES { get; set; }
-        public virtual DbSet<USER_FAVOURITES> USER_FAVOURITES { get; set; }
+        public virtual DbSet<TERMINFO> TERMINFOes { get; set; }
         public virtual DbSet<USER_TYPES> USER_TYPES { get; set; }
-        public virtual DbSet<USER> USERS { get; set; }
         public virtual DbSet<VENDOR_BRANCHES> VENDOR_BRANCHES { get; set; }
         public virtual DbSet<VENDOR> VENDORS { get; set; }
         public virtual DbSet<WebsitePage> WebsitePages { get; set; }
         public virtual DbSet<WISHES_PRODUCT> WISHES_PRODUCT { get; set; }
-        public virtual DbSet<BarcodeNewTest> BarcodeNewTests { get; set; }
-        public virtual DbSet<BARCODE> BARCODES { get; set; }
-        public virtual DbSet<ITEMINFO> ITEMINFOes { get; set; }
-        public virtual DbSet<PS000> PS000 { get; set; }
-        public virtual DbSet<PS000Test> PS000Test { get; set; }
-        public virtual DbSet<STOCK> STOCKs { get; set; }
-        public virtual DbSet<TERMINFO> TERMINFOes { get; set; }
-        public virtual DbSet<TEST> TESTs { get; set; }
-        public virtual DbSet<ItemList> ItemLists { get; set; }
-        public virtual DbSet<Report> Reports { get; set; }
-        public virtual DbSet<USER_ADDRESSES> USER_ADDRESSES { get; set; }
+        public virtual DbSet<ORDER> ORDERS { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {
@@ -516,7 +509,7 @@ namespace SASTI.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SpGetHomeProducts_Result>("SpGetHomeProducts", categoryIdParameter, branchIdParameter);
         }
     
-        public virtual ObjectResult<SpGetProductDetailByProductNameUrl_Result> SpGetProductDetailByProductNameUrl(string productNameUrl, Nullable<int> branchId)
+        public virtual ObjectResult<SpGetProductDetailByProductNameUrl_Result> SpGetProductDetailByProductNameUrl(string productNameUrl, Nullable<int> branchId, Nullable<int> userId)
         {
             var productNameUrlParameter = productNameUrl != null ?
                 new ObjectParameter("ProductNameUrl", productNameUrl) :
@@ -526,7 +519,11 @@ namespace SASTI.Models
                 new ObjectParameter("BranchId", branchId) :
                 new ObjectParameter("BranchId", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SpGetProductDetailByProductNameUrl_Result>("SpGetProductDetailByProductNameUrl", productNameUrlParameter, branchIdParameter);
+            var userIdParameter = userId.HasValue ?
+                new ObjectParameter("UserId", userId) :
+                new ObjectParameter("UserId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SpGetProductDetailByProductNameUrl_Result>("SpGetProductDetailByProductNameUrl", productNameUrlParameter, branchIdParameter, userIdParameter);
         }
     
         public virtual ObjectResult<SpGetProductImagesByProductId_Result> SpGetProductImagesByProductId(Nullable<int> productId)

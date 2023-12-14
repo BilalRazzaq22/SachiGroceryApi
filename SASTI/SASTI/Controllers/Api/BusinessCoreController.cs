@@ -210,10 +210,10 @@ namespace SASTI.Controllers
         {
             return new UserManager().RegisterUser(u);
         }
-        public DataSet saveCustomer(TEMP_CUSTOMERS customer)
-        {
-            return new UserManager().saveCustomer(customer);
-        }
+        //public DataSet saveCustomer(TEMP_CUSTOMERS customer)
+        //{
+        //    return new UserManager().saveCustomer(customer);
+        //}
         public USER_ADDRESSES saveNewAddress(USER_ADDRESSES customer)
         {
             return new UserManager().saveNewAddress(customer);

@@ -69,12 +69,6 @@
     <Compile Include="BARCODE.cs">
       <DependentUpon>SASTI.tt</DependentUpon>
     </Compile>
-    <Compile Include="BarcodeNewTest.cs">
-      <DependentUpon>SASTI.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BARCODESTest.cs">
-      <DependentUpon>SASTI.tt</DependentUpon>
-    </Compile>
     <Compile Include="Blog.cs">
       <DependentUpon>SASTI.tt</DependentUpon>
     </Compile>
@@ -99,6 +93,7 @@
     <Compile Include="COUPON.cs">
       <DependentUpon>SASTI.tt</DependentUpon>
     </Compile>
+    <Compile Include="Dto\ConfigurationDto.cs" />
     <Compile Include="Dto\CustomerOrderDto.cs" />
     <Compile Include="Dto\DataSetDto.cs" />
     <Compile Include="Dto\OrderDto.cs" />
@@ -152,9 +147,6 @@
     <Compile Include="PRODUCT.cs">
       <DependentUpon>SASTI.tt</DependentUpon>
     </Compile>
-    <Compile Include="ProductTest.cs">
-      <DependentUpon>SASTI.tt</DependentUpon>
-    </Compile>
     <Compile Include="PRODUCT_BRANDS.cs">
       <DependentUpon>SASTI.tt</DependentUpon>
     </Compile>
@@ -184,9 +176,6 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PS000.cs">
-      <DependentUpon>SASTI.tt</DependentUpon>
-    </Compile>
-    <Compile Include="PS000Test.cs">
       <DependentUpon>SASTI.tt</DependentUpon>
     </Compile>
     <Compile Include="RECOMMENDED_PRODUCTS.cs">
@@ -291,16 +280,7 @@
     <Compile Include="SUB_CATEGORIES.cs">
       <DependentUpon>SASTI.tt</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>SASTI.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TEMP_CUSTOMERS.cs">
-      <DependentUpon>SASTI.tt</DependentUpon>
-    </Compile>
     <Compile Include="TERMINFO.cs">
-      <DependentUpon>SASTI.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TEST.cs">
       <DependentUpon>SASTI.tt</DependentUpon>
     </Compile>
     <Compile Include="USER.cs">

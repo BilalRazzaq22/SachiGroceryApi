@@ -472,30 +472,30 @@ namespace SASTI.Controllers.Api
                 //return JsonResponse.GetResponse(Enums.ResponseCode.Exception, ex.Message + ex.InnerException);
             }
         }
-        [HttpPost]
-        [Route("api/saveCustomer")]
-        // POST api/<controller>
-        public ApiResponse saveCustomer(TEMP_CUSTOMERS customer)
-        {
-            try
-            {
-                DataSet user = controller.saveCustomer(customer);
-                if (user.Tables[0].Rows.Count > 0)
-                {
-                    user.Tables[0].TableName = "TEMP_USERS";
-                    //SessionManager.SetUserSession(int.Parse(user.Tables[0].Rows[0][0].ToString()));
-                    //SessionManager.SetUsernameSession(user.Tables[0].Rows[0][1].ToString());
-                    return JsonResponse.GetResponse(Enums.ResponseCode.Success, user);
+        //[HttpPost]
+        //[Route("api/saveCustomer")]
+        //// POST api/<controller>
+        //public ApiResponse saveCustomer(TEMP_CUSTOMERS customer)
+        //{
+        //    try
+        //    {
+        //        DataSet user = controller.saveCustomer(customer);
+        //        if (user.Tables[0].Rows.Count > 0)
+        //        {
+        //            user.Tables[0].TableName = "TEMP_USERS";
+        //            //SessionManager.SetUserSession(int.Parse(user.Tables[0].Rows[0][0].ToString()));
+        //            //SessionManager.SetUsernameSession(user.Tables[0].Rows[0][1].ToString());
+        //            return JsonResponse.GetResponse(Enums.ResponseCode.Success, user);
 
-                }
-                else
-                    return JsonResponse.GetResponse(Enums.ResponseCode.NotExists, user);
-            }
-            catch (Exception ex)
-            {
-                return JsonResponse.GetResponse(Enums.ResponseCode.Exception, ex.Message);
-            }
-        }
+        //        }
+        //        else
+        //            return JsonResponse.GetResponse(Enums.ResponseCode.NotExists, user);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return JsonResponse.GetResponse(Enums.ResponseCode.Exception, ex.Message);
+        //    }
+        //}
         public ApiResponse saveNewAddress(USER_ADDRESSES customer)
         {
             try

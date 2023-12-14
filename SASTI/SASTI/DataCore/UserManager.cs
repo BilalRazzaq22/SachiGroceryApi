@@ -241,19 +241,19 @@ WHERE uf.USER_ID = {0} AND uf.PRODUCT_ID = {1}  AND  uf.IS_ACTIVE = 1 AND B.bdef
                 throw;
             }
         }
-        public DataSet saveCustomer(TEMP_CUSTOMERS customer)
-        {
-            try
-            {
-                gEnt.TEMP_CUSTOMERS.Add(customer);
-                gEnt.SaveChanges();
-                return ExecuteDataSet(string.Format(QRY_TEMP_CUSTOMER, customer.TEMP_CUSTOMER_ID));
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
+        //public DataSet saveCustomer(TEMP_CUSTOMERS customer)
+        //{
+        //    try
+        //    {
+        //        gEnt.TEMP_CUSTOMERS.Add(customer);
+        //        gEnt.SaveChanges();
+        //        return ExecuteDataSet(string.Format(QRY_TEMP_CUSTOMER, customer.TEMP_CUSTOMER_ID));
+        //    }
+        //    catch (Exception)
+        //    {
+        //        throw;
+        //    }
+        //}
         public USER_ADDRESSES saveNewAddress(USER_ADDRESSES customer)
         {
             customer.CREATED_ON = DateTime.Now;
