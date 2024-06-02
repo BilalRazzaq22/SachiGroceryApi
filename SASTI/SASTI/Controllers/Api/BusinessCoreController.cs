@@ -278,6 +278,11 @@ namespace SASTI.Controllers
         {
             return new UserManager().resetPassword(u);
         }
+        public DataSet getUserProfile(UserProfileDto u)
+        {
+            return new UserManager().getUserProfile(u);
+        }
+
         #endregion
 
         #region ORDER

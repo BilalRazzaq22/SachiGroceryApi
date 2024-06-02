@@ -275,7 +275,6 @@ namespace SASTI.BusinessLayer
                 return dataSetDto;
             }
         }
-
         public DataSetDto LogOut(UserDto param)
         {
             DataSetDto dataSetDto = new DataSetDto();
@@ -344,7 +343,7 @@ namespace SASTI.BusinessLayer
         public List<USER_ADDRESSES> SaveUserAddresses(UserAddressDto userAddress)
         {
             //var userAdd = _userAddresses.Repository.GetAll().Where(x => x.USER_ID == userAddress.UserId).ToList();
-            
+
             foreach (var item in userAddress.UserAddresses)
             {
                 var ua = _userAddresses.Repository.GetAll().FirstOrDefault(x => x.USER_ID == userAddress.UserId && x.LATITUDE == item.Latitude && x.LONGITUDE == item.Longitude && x.IS_ACTIVE == true);
@@ -358,7 +357,7 @@ namespace SASTI.BusinessLayer
                         USER_ID = userAddress.UserId,
                         LATITUDE = item.Latitude,
                         LONGITUDE = item.Longitude,
-                        BRANCH_ID=item.BranchId
+                        BRANCH_ID = item.BranchId
                     };
                     _userAddresses.Repository.Add(uaddress);
                 }
@@ -381,7 +380,7 @@ namespace SASTI.BusinessLayer
                     //};
                     _userAddresses.Repository.Update(ua);
                 }
-                
+
             }
             return _userAddresses.Repository.GetAll().Where(x => x.USER_ID == userAddress.UserId).ToList();
         }

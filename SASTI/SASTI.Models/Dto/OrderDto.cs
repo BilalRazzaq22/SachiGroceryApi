@@ -37,5 +37,6 @@ namespace SASTI.Models.Dto
         public Nullable<int> IS_PACKAGE { get; set; }
         public Nullable<byte> ADDED_BY { get; set; }
         public decimal DeliveryFee { get; set; }
+        public bool IsActiveUser { get; set; }
     }
 }

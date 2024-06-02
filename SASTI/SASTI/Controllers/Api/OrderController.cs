@@ -317,8 +317,18 @@ namespace SASTI.Controllers
         }
         [HttpPost]
         [Route("api/updateOrderStatus")]
-        public ApiResponse updateOrderStatus(UserOrders o)
+        public HttpResponseMessage updateOrderStatus(HttpRequestMessage request, UserOrders o)
         {
+            DataSetDto dataSetDto = new DataSetDto();
+
+            if (!o.IsActiveUser)
+            {
+                dataSetDto.Response.Code = (int)HttpStatusCode.Forbidden;
+                dataSetDto.Response.Message = "Forbidden Access";
+                dataSetDto.Response.Data = false;
+                return request.CreateResponse(HttpStatusCode.Forbidden, dataSetDto);
+            }
+
             DataSet ds = controller.getOrdersByOrderId(o.ORDER_ID);
             string customerId = ds.Tables[0].Rows[0]["CUSTOMER_ID"].ToString();
             string branchId = ds.Tables[0].Rows[0]["BRANCH_ID"].ToString();
@@ -382,12 +392,19 @@ namespace SASTI.Controllers
                     }
                 }
 
-
-
-                return JsonResponse.GetResponse(Enums.ResponseCode.Success, true);
+                dataSetDto.Response.Code = (int)HttpStatusCode.OK;
+                dataSetDto.Response.Message = "Success";
+                dataSetDto.Response.Data = true;
+                return request.CreateResponse(HttpStatusCode.OK, dataSetDto);
             }
             else
-                return JsonResponse.GetResponse(Enums.ResponseCode.NotExists, false);
+            {
+                dataSetDto.Response.Code = (int)HttpStatusCode.NotFound;
+                dataSetDto.Response.Message = "Not Found";
+                dataSetDto.Response.Data = true;
+                return request.CreateResponse(HttpStatusCode.NotFound, dataSetDto);
+            }
+                
         }
         [HttpPost]
         [Route("api/updateOrderProducts")]
@@ -588,8 +605,18 @@ namespace SASTI.Controllers
         }
         [HttpPost]
         [Route("api/rejectByManager")]
-        public ApiResponse rejectByManager([FromBody] ORDER o)
+        public HttpResponseMessage rejectByManager(HttpRequestMessage request, OrderDto o)
         {
+            DataSetDto dataSetDto = new DataSetDto();
+
+            if (!o.IsActiveUser)
+            {
+                dataSetDto.Response.Code = (int)HttpStatusCode.Forbidden;
+                dataSetDto.Response.Message = "Forbidden Access";
+                dataSetDto.Response.Data = false;
+                return request.CreateResponse(HttpStatusCode.Forbidden, dataSetDto);
+            }
+
             DataSet ds = controller.getOrdersByOrderId(o.ORDER_ID);
 
             string customerId = ds.Tables[0].Rows[0]["CUSTOMER_ID"].ToString();
@@ -620,10 +647,18 @@ namespace SASTI.Controllers
                     }
                 }
 
-                return JsonResponse.GetResponse(Enums.ResponseCode.Success, true);
+                dataSetDto.Response.Code = (int)HttpStatusCode.OK;
+                dataSetDto.Response.Message = "Success";
+                dataSetDto.Response.Data = true;
+                return request.CreateResponse(HttpStatusCode.OK, dataSetDto);
             }
             else
-                return JsonResponse.GetResponse(Enums.ResponseCode.Exception, false);
+            {
+                dataSetDto.Response.Code = (int)HttpStatusCode.NotFound;
+                dataSetDto.Response.Message = "Not Found";
+                dataSetDto.Response.Data = false;
+                return request.CreateResponse(HttpStatusCode.NotFound, dataSetDto);
+            }
         }
     }
 }

@@ -340,5 +340,10 @@ WHERE uf.USER_ID = {0} AND uf.PRODUCT_ID = {1}  AND  uf.IS_ACTIVE = 1 AND B.bdef
             else
                 return ds;
         }
+        
+        public DataSet getUserProfile(UserProfileDto u)
+        {
+            return GetUserById(u.USER_ID);
+        }
     }
 }

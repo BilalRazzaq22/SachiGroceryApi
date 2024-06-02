@@ -13,6 +13,6 @@ namespace SASTI.Models
         public int USER_ID { get; set; }
         public int BRANCH_ID { get; set; }
         public string PICKUP_TIME { get; set; }
-
+        public bool IsActiveUser { get; set; }
     }
 }

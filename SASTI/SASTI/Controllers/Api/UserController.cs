@@ -289,7 +289,7 @@ namespace SASTI.Controllers.Api
                     return request.CreateResponse(HttpStatusCode.Forbidden, dataSetDto);
                 }
 
-                USER user = controller.AuthenticateUser(username, password,u.USER_TYPE_ID);
+                USER user = controller.AuthenticateUser(username, password, u.USER_TYPE_ID);
                 if (user != null)
                 {
                     usersLogic.CheckDeviceFCMToken(u, user);
@@ -523,11 +523,11 @@ namespace SASTI.Controllers.Api
         [Route("api/saveUserAddresses")]
         public HttpResponseMessage saveUserAddresses(HttpRequestMessage request, UserAddressDto userAddress)
         {
-            DataSetDto dataSetDto = new DataSetDto();   
+            DataSetDto dataSetDto = new DataSetDto();
             UsersLogic usersLogic = new UsersLogic();
             var obj = usersLogic.SaveUserAddresses(userAddress);
 
-            if(obj.Count > 0)
+            if (obj.Count > 0)
             {
                 dataSetDto.Response.Code = (int)HttpStatusCode.OK;
                 dataSetDto.Response.Message = "User addresses saved successfully";
@@ -659,6 +659,42 @@ namespace SASTI.Controllers.Api
             //else
             //    return JsonResponse.GetResponse(Enums.ResponseCode.NotExists, user);
         }
+
+        [HttpPost]
+        [Route("api/GetUserProfile")]
+        public HttpResponseMessage GetUserProfile(HttpRequestMessage request, UserProfileDto u)
+        {
+            DataSetDto dataSetDto = new DataSetDto();
+            try
+            {
+                DataSet ds = controller.getUserProfile(u);
+
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+
+                    dataSetDto.Response.Code = (int)HttpStatusCode.OK;
+                    dataSetDto.Response.Message = "Success";
+                    dataSetDto.Response.Data = ds.Tables[0];
+                    return request.CreateResponse(HttpStatusCode.OK, dataSetDto);
+                }
+                else
+                {
+                    dataSetDto.Response.Code = (int)HttpStatusCode.NotFound;
+                    dataSetDto.Response.Message = "Unable to find user record";
+                    dataSetDto.Response.Data = null;
+                    return request.CreateResponse(HttpStatusCode.NotFound, dataSetDto);
+                }
+            }
+            catch (Exception ex)
+            {
+                LogHelper.CreateLog(ex);
+                dataSetDto.Response.Code = (int)HttpStatusCode.BadRequest;
+                dataSetDto.Response.Message = "Unable to find user record";
+                dataSetDto.Response.Data = ex;
+                return request.CreateResponse(HttpStatusCode.BadRequest, dataSetDto);
+            }
+        }
+
         [HttpPost]
         [Route("api/editAddress")]
         public ApiResponse editAddress(USER_ADDRESSES u)
