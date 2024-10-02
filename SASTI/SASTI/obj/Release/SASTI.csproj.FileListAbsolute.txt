@@ -45,3 +45,5 @@ C:\Users\bilal\Downloads\SASTI\SASTI\obj\Release\SASTI.csprojAssemblyReference.c
 C:\Users\bilal\Downloads\SASTI\SASTI\obj\Release\SASTI.csproj.CoreCompileInputs.cache
 D:\sachigrocery_apis\SASTI\SASTI\obj\Release\SASTI.csproj.AssemblyReference.cache
 D:\sachigrocery_apis\SASTI\SASTI\obj\Release\SASTI.csproj.CoreCompileInputs.cache
+D:\Demo Projects\SachiGroceryApi\SASTI\SASTI\obj\Release\SASTI.csproj.AssemblyReference.cache
+D:\Demo Projects\SachiGroceryApi\SASTI\SASTI\obj\Release\SASTI.csproj.CoreCompileInputs.cache
