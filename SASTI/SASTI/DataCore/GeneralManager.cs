@@ -138,7 +138,12 @@ WHERE P.CATEGORY_ID = {0} and b.IsActive = 1 and b.bDEFAULT = 1 and P.SUB_CATEGO
                 }
             }
 
-            return ExecuteDataSet(string.Format("select * from BRANCHES where BRANCH_ID = {0}", nearestBranchId));
+            DataSet ds = ExecuteDataSet($"select * from BRANCHES where BRANCH_ID = {nearestBranchId} AND IS_ACTIVE = 1");
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                return ds;
+            }
+            return null;
         }
         private double DegreeToRadian(double angle)
         {

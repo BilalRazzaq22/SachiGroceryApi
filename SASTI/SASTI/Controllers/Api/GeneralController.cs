@@ -427,6 +427,13 @@ namespace SASTI.Controllers
         {
             DataSetDto dataSetDto = new DataSetDto();
             DataSet branches = controller.getNearestBranch(latitude, longitude);
+            if (branches == null)
+            {
+                dataSetDto.Response.Code = (int)HttpStatusCode.NotFound;
+                dataSetDto.Response.Message = "Cannot find branch location, Please try again.";
+                dataSetDto.Response.Data = null;
+                return request.CreateResponse(HttpStatusCode.NotFound, dataSetDto);
+            }
             branches.Tables[0].TableName = "BRANCHES";
             if (branches.Tables[0].Rows.Count > 0)
             {
